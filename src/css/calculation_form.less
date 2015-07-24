@@ -1,0 +1,155 @@
+@import "flex_mixins";
+@import "shadow_mixins";
+@import "palette";
+@import "myconstants";
+@import "pligor_mixins";
+@import "nthchild_recipes";
+@import "rangeinput";
+
+.oikiaka_calculations {
+    //width: 80%;
+    //margin-left: auto;
+    //margin-right: auto;
+    margin-top: 2%;
+
+    @calcCaseMinWidth: 550px;
+
+    min-width: @calcCaseMinWidth;
+
+    .calc_title {
+        color: @bright;
+        font-size: 36px;
+    }
+
+    .oikiakaCalcRegion {
+        margin-top: 2%;
+    }
+
+    .form_table_wrapper {
+        .flexbox();
+
+        .oikiaka_form {
+            .flex(1);
+
+            .flexbox();
+            .flexdirection(column);
+            .flexalignitems(center);
+
+            margin-top: 1%;
+
+            label {
+                &.range {
+                    //.debug();
+                    display: block;
+                    text-align: center;
+                    font-size: 1.5em;
+                    color:@bright;
+                }
+            }
+
+            .yearly_energy {
+                margin-top: 2%;
+
+                text-align: center;
+                font-size: 3em;
+                color: @verybright;
+
+                .energy::after {
+                    content: " kWh"
+                }
+            }
+
+            .rangeInput(
+                @track-color: @dark,
+                @track-height: 35px,
+                @thumbcolor: @verybright,
+                @thumb-height: 70px,
+                @thumb-border-color: @ctacolor,
+                @thumb-width: 35px,
+                @track-width: 90%
+            );
+        }
+
+        .table_wrapper {
+            .flex(1);
+
+            @calcCasePadding: 10px;
+            padding: @calcCasePadding;
+            border: 10px solid @bright;
+            border-radius: 10px;
+
+            table {
+                color: @bright;
+
+                //border-spacing: 5px 15px;   //property applies to table only
+                //border-collapse: collapse;  //property applies to table only
+
+                .currency::after {
+                    content: " €";
+                }
+
+                .kgCO2::after {
+                    //content: "kg CO<sub>2</sub>"; //content does not support html
+                    content: " kg CO₂";
+                }
+
+                .years::after {
+                    content: " έτη";
+                }
+
+                .weeks::after {
+                    content: " εβδομάδες";
+                }
+
+                tr {
+                    td {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        border-right: 1px solid @dark;
+                    }
+
+                    td {
+                        font-size: 22px;
+
+                        padding-top: 1%;
+                        padding-bottom: 1%;
+
+                        &:first-child {
+                            font-size: 18px;
+                            //width: 75%;
+                            //.debug();
+                            border-right: none;
+                        }
+
+                        &:last-child {
+                            border-right: none;
+                            //.debug();
+                        }
+                    }
+
+                    .all_but_the_first_n(td, 1, {
+                        text-align: center;
+                    });
+                }
+            }
+        }
+    }
+
+    .cta_wrapper {
+        .flexbox();
+        .flexjustifycontent(center);
+
+        margin-bottom: 2%;
+        margin-top: 1%;
+
+        .cta_button {
+            .cta();
+
+            width: 70%;
+
+            span {
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+@import url(http://fonts.googleapis.com/css?family=Flamenco:400);
+.portfolio {
+  width: 100%;
+  background: -webkit-linear-gradient(#310a63, #f2f2f2);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#310a63, #f2f2f2);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#310a63, #f2f2f2);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#310a63, #f2f2f2);
+  /* Standard syntax */
+}
+.portfolio .container {
+  /*max-width: @maxpagewidth;
+        margin-right: auto;
+        margin-left: auto;*/
+  min-height: 450px;
+  height: 810px;
+  position: relative;
+}
+.portfolio .container .portfoliomap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.portfolio .container .portfoliomap_enabled {
+  pointer-events: all;
+}
+.portfolio .container .customcontrols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 810px;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  /*.customcontrols_relative {
+                position: relative;
+                //.debug();
+                width: 100%;
+                height: @height;
+                */
+  /*
+                    width: 100%;
+                    position: absolute;
+                    @halfHeight: @fontSize / 2;
+                    top: ~"calc(50% - @{halfHeight})";*/
+}
+.portfolio .container .customcontrols .overlay_button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  cursor: pointer;
+  font-size: 64px;
+  height: 100%;
+  color: #a7a2eb;
+  background-color: rgba(49, 10, 99, 0.7);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  pointer-events: all;
+}
+.portfolio .container .customcontrols .overlay_button p {
+  text-align: center;
+  margin: auto;
+}
+.portfolio .container .customcontrols .overlay_button_minimized {
+  font-size: 20px;
+  height: auto;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  margin-top: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.portfolio .container .customcontrols .buttonup {
+  /*position: absolute;
+                    top: 0;*/
+  color: #f2f2f2;
+  align-self: center;
+  -webkit-align-self: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-decoration: none;
+  pointer-events: all;
+  width: 20%;
+  height: 100px;
+  background-color: #310a63;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.portfolio .container .customcontrols .buttonup p {
+  margin: auto;
+  font-size: 80px;
+  font-family: Flamenco, cursive;
+}
+.portfolio .container .customcontrols .buttonup p.rotated {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+}
+.portfolio .container .customcontrols .buttondown {
+  /*position: absolute;
+                    bottom: 0;*/
+  color: #310a63;
+  align-self: center;
+  -webkit-align-self: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-decoration: none;
+  pointer-events: all;
+  width: 20%;
+  height: 100px;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+.portfolio .container .customcontrols .buttondown p {
+  margin: auto;
+  font-size: 80px;
+  font-family: Flamenco, cursive;
+}
+.portfolio .container .customcontrols .buttondown p.rotated {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+}

@@ -1,0 +1,1402 @@
+<!--TODO Απο όλα τα πάρκα να βγάλω έναν καλό μέσο όρο για την ενέργεια ανά έτος σε αντιστοίχηση με τα kWp ώστε οι υπολογισμοί να είναι ακόμα καλύτεροι -->
+<!--TODO υπολοιπες φωτογραφίες στον χάρτη -->
+<!--TODO include keywords (metatags) -->
+<!--TODO create calculation forms mockups -->
+<!--TODO fix the map according to Alexey -->
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PLIGOROPOULOS Ενεργειακές Λύσεις</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon"/>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--todo load local scripts if cdn fails
+    http://stackoverflow.com/questions/10537039/how-to-determine-if-css-has-been-loaded
+    http://www.phpied.com/when-is-a-stylesheet-really-loaded/
+    -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/4.12.7/video-js.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.0/outdatedbrowser.min.css" rel="stylesheet">
+    <!--<link href="bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.css" rel="stylesheet">-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-text-rotator/1.0.0/simpletextrotator.min.css"
+          rel="stylesheet">
+
+
+    <!--<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/generic.css">
+
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/jumbotron.css">
+    <link rel="stylesheet" href="css/jumbotron_video.css">
+    <link rel="stylesheet" href="css/announcement.css">
+    <link rel="stylesheet" href="css/how_it_works.css">
+    <link rel="stylesheet" href="css/calculations.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/contact.css">-->
+
+    <script type="text/javascript">
+        document.writeln('<link rel="stylesheet" href="css/main.css?version=' + 1.08 +'"/>')
+    </script>
+
+    <!--always keep as the first javascript include: https://github.com/burocratik/Outdated-Browser/tree/master-->
+    <script type="text/javascript">
+        document.writeln('<script src="js/myOutdatedBrowser.js?version=' + 1.08 +'" type="text/javascript"><\/script>')
+    </script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.0/outdatedbrowser.min.js" type="text/javascript"></script>-->
+    <!--<script type="text/javascript">
+        (typeof(outdatedBrowser) === "undefined") &&
+        document.writeln('<script src="bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js" type="text/javascript"><\/script>')
+    </script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        (typeof(window.Modernizr) === "undefined") &&
+        document.writeln('<script src="js/vendor/modernizr-2.8.3.min.js" type="text/javascript"><\/script>')
+    </script>
+</head>
+<body>
+
+<!-- Add your site or application content inside body -->
+<!--TODO check how the website looks with comic neue fonts -->
+
+<!-- TODO see here to see how you could solve the template, all in one file situation: http://stackoverflow.com/a/25222614/720484 -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv TEMPLATE SCRIPTS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+
+<script type="text/template" id="maintemplate">
+    <section id="header">
+
+    </section>
+
+    <section id="jumbotron">
+
+    </section>
+
+    <section id="announcement_section">
+
+    </section>
+
+    <!--we are renaming them to prevent default browser behavior when the hashtag and the id match-->
+
+    <section id="how_it_works_section" class="majorsection">
+
+    </section>
+
+    <section id="calculations_section" class="majorsection">
+
+    </section>
+
+    <section id="portfolio_section" class="majorsection">
+
+    </section>
+
+    <section id="testimonials_section" class="majorsection">
+
+    </section>
+
+    <section id="contact_section" class="majorsection">
+
+    </section>
+</script>
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv FEKPOPUP vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="popup">-->
+<script type="text/template" id="fek_popup_template">
+    <div class="close_button">
+        <a>
+            <div class="icon-cancel"></div>
+            <div><p>Κλείσιμο και επιστροφή</p></div>
+        </a>
+    </div>
+
+    <iframe width="100%" height="100%" src='http://bit.ly/1JxrtjR' frameborder='0' allowfullscreen></iframe>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ FEKPOPUP ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv ANNOUNCEMENT vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="announcement">-->
+<script type="text/template" id="announcement_template">
+    <div class="container">
+        <div class="ok_button">
+            <a>
+                <p>OK το έχω υπόψη</p>
+            </a>
+        </div>
+        <div class="main_part">
+            <a href="#fekpopup">
+                <div class="left_image">
+                    <img src="img/newspaper_gov.png"/>
+                </div>
+                <div class="center_text">
+                    <div><p>Διάβασε σχετικό δημοσίευμα στην Εφημερίδα της Κυβερνήσεως</p></div>
+                    <div><p>Αριθμός Φύλλου 3583 - Εκδόθηκε 31 Δεκεμβρίου 2014</p></div>
+                </div>
+                <div class="right_image">
+                    <div class="icon-file-pdf"></div>
+                </div>
+            </a>
+        </div>
+        <div class="dummy_right">&nbsp;</div>
+    </div>
+
+    <div class="popup_wrapper">
+
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ANNOUNCEMENT ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<script type="text/template" id="logotemplate">
+    <div class="pligor_logo">
+        <img src="<%= logoImage %>"/>
+    </div>
+    <div class="logotitles_wrapper">
+        <div class="logo_title">
+            <p><%= logoTitle %></p>
+        </div>
+        <div class="logo_subtitle">
+            <p><%= logoSubtitle %></p>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="headertemplate">
+    <div class="toppanel">
+        <div class="logo_wrapper">
+
+        </div>
+
+        <div class="mainmenu_wrapper">
+
+        </div>
+    </div>
+</script>
+
+<!--<li>-->
+<script type="text/template" id="menuitem_template">
+    <!--class="scroll" necessary for the anchor scroll library-->
+    <a href="#<%= menuItemTarget %>">
+        <div>
+            <p><%= menuItemTitle %></p>
+        </div>
+
+        <div>
+            <p><%= menuItemSubtitle %></p>
+        </div>
+    </a>
+</script>
+<!--</li>-->
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv JUMBOTRON BACKGROUND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="jumbotron_background_container">-->
+<script type="text/template" id="jumbotron_background_template">
+
+    <div class="jumbotron_background_video_wrapper">
+        <div class="video_wrapper">
+
+            <!--controls-->
+            <!--width="400" height="664"-->
+            <!--autoplay-->
+            <video id="jumbotron_background_video" class="video-js vjs-default-skin"
+                   preload="auto"
+                   poster="img/jumbotron_background_first_frame.jpg"
+                   data-setup='{}'
+                   loop
+                >
+
+                <source src="videos/jumbotron_background.webm" type="video/webm">
+                <source src="videos/jumbotron_background.mp4" type="video/mp4">
+                <source src="videos/jumbotron_background.ogg" type="video/ogg">
+
+                <!--<source src="really-cool-video.webm" type='video/webm'>-->
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser
+                    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports
+                    HTML5 video</a>
+                </p>
+            </video>
+
+        </div>
+    </div>
+
+    <div class="icon-play-outline control_button"></div>
+
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ JUMBOTRON BACKGROUND ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv JUMBOTRON vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="jumbotron">-->
+<script type="text/template" id="jumbotron_template">
+    <div class="jumbotron_background">
+
+    </div>
+
+    <div class="jumbotron_container">
+        <div class="jumbotron_center">
+            <div class="what_we_do_title">
+                <p>ΔΩΡΕΑΝ <span class="rotate">ΔΕΗ,ΡΕΥΜΑ,ΗΛΕΚΤΡΙΣΜΟ,ΦΩΣ</span> ΓΙΑ 25 ΧΡΟΝΙΑ</p>
+            </div>
+            <div class="what_we_do_subtitle">
+                <p>Από 8 Μαΐου του 2015 ο ήλιος που πέφτει πάνω στη στέγη σου</p>
+
+                <p>μπορεί να σε κάνει ενεργειακά ανεξάρτητο</p>
+            </div>
+
+            <a href="#contact" class="main_cta">
+                <p>Θέλω να γίνω</p>
+
+                <p>ενεργειακά ανεξάρτητος</p>
+            </a>
+        </div>
+
+        <a href="#how_it_works" class="learn_more">
+            <p>Μάθε Περισσότερα</p>
+
+            <p>V</p>
+        </a>
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ JUMBOTRON ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!--<div class="step1of3">-->
+<script type="text/template" id="how_it_works_step1of3_template">
+    <div class="leftcolumn">
+        <div class="how_it_works_title">
+            <span class="how_it_works_number">①</span>
+            <span class="how_it_works_title_text">Εγκατάσταση</span>
+        </div>
+
+        <ul>
+            <li>
+                <div><p>✓</p></div>
+                <div><p>Συμφωνα με τις δικες σου αναγκες ωστε να σε συμφερει</p></div>
+            </li>
+            <li>
+                <div><p>✓</p></div>
+                <div><p>Πληρης Τεχνικη και Οικονομικη μελετη εξηγει με απλα λογια το πως, το ποτε και το
+                    γιατι</p>
+                </div>
+            </li>
+            <li>
+                <div><p>✓</p></div>
+                <div><p>Γρηγορη & Ευκολη εγκατασταση συστηματος Ηλιακων Πανελ μετατρεπουν τον ηλιο σε
+                    ηλεκτρισμο</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="consume_produce_diagram">
+            <div class="power_grid">
+                <div><p class="icon icon-electrical-power"></p></div>
+                <div><p>Ηλεκτρικό Δίκτυο</p></div>
+            </div>
+
+            <div class="consumer_producer">
+                <div class="consumer_wrapper">
+                    <div class="consumes_text"><p>ΚΑΤΑΝΑΛΩΝΕΙ</p></div>
+                    <div class="consumes_arrow"></div>
+                    <div class="consumer">
+                        <div class="icon icon-consumer-building"></div>
+                        <p>ΚΑΤΑΝΑΛΩΤΗΣ</p>
+                    </div>
+                </div>
+
+                <div class="producer_wrapper">
+                    <div class="produces_arrow"></div>
+                    <div class="produces_text"><p>ΠΑΡΑΓΕΙ</p></div>
+                    <div class="producer">
+                        <div class="icon icon-producer-solar-panel"></div>
+                        <p>ΗΛΙΑΚΟ ΠΑΝΕΛ</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="rightcolumn">
+        <div class="smiling_engineer">
+            <img src="img/smiling_engineer.png"/>
+        </div>
+
+        <div class="pvpanels twopanels">
+            <div class="caption"><p>για μικρούς</p></div>
+            <div class="image">
+                <img src="img/twopvpanels.jpg"/>
+            </div>
+        </div>
+
+        <div class="pvpanels">
+            <div class="caption"><p>και για μεγαλους</p></div>
+            <div class="image">
+                <img src="img/manypvpanels.jpg"/>
+            </div>
+        </div>
+    </div>
+</script>
+<!--</div>-->
+
+<!--<div class="step2of3">-->
+<script type="text/template" id="how_it_works_step2of3_template">
+
+    <div class="how_it_works_title">
+        <span class="how_it_works_number">②</span>
+        <span class="how_it_works_title_text">Ενεργειακός Συμψηφισμός (Net Metering)</span>
+    </div>
+
+    <div class="content2of3">
+        <div class="leftdummy">
+        </div>
+
+        <div class="rightcontent">
+
+
+            <div class="last_year_wrapper">
+                <div>
+                    <div class="last_year_row">Πλήρωνες τη ΔΕΗ για το ρεύμα που κατανάλωνες</div>
+                    <div class="last_year">last year</div>
+                </div>
+
+                <div>
+                    <div class="last_year_row">και η ΔΕΗ σε πλήρωνε για την παραγωγή από τα ηλιακά πάνελ
+                    </div>
+                    <div class="last_year">last year</div>
+                </div>
+
+                <div>
+                    <div class="last_year_row">χρηματικος συμψηφισμος = λογιστικος εφιαλτης</div>
+                    <div class="last_year">last year</div>
+                </div>
+            </div>
+
+            <div class="energy_netting_text">
+                <p>Η ΔΕΗ δεν σε πληρώνει αλλά και εσύ δεν πληρώνεις τη ΔΕΗ</p>
+
+                <p>ΣΥΜΨΗΦΙΣΜΟΣ ΚΑΘΕ 4-ΜΗΝΟ ΒΑΣΕΙ ΕΝΕΡΓΕΙΑΣ (ΚΙΛΟΒΑΤΩΡΕΣ, kWh)</p>
+            </div>
+
+            <div class="for_example">
+                <p>Για παράδειγμα:</p>
+            </div>
+
+            <div class="example">
+                <div class="trigger_period"></div>
+
+                <div class="periods_row">
+
+                    <div class="threeperiods">
+                        <div class="period">
+                            <div class="month_names">
+                                <p>μάρτιος - ιούνιος</p>
+                            </div>
+                            <div class="energy_bars scrollAnimated firstPeriodEnergyBars">
+                                <div class="consumption">
+                                    <div
+                                        class="icon icon-consumer-building consumption_icon"></div>
+                                    <div class="consumption_text"><p>κατανάλωση</p></div>
+                                </div>
+
+                                <div class="production">
+                                    <div class="production_explain"><p><span>ενέργεια</span> που θα σου
+                                        χρωστάνε →
+                                    </p></div>
+                                    <div
+                                        class="icon icon-producer-solar-panel production_icon"></div>
+                                    <div class="production_text"><p>παραγωγή</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="period">
+                            <div class="month_names">
+                                <p>ιούλιος - σεπτέμβριος</p>
+                            </div>
+                            <div class="energy_bars scrollAnimated secondPeriodEnergyBars">
+                                <div class="consumption fixedHeightConsumptionPeriod2">
+                                    <div
+                                        class="icon icon-consumer-building consumption_icon"></div>
+                                    <div class="consumption_text"><p>κατανάλωση</p></div>
+                                    <div class="consumption_explain"><p>← <span>ενέργεια</span> που σου
+                                        χρωστούσανε
+                                    </p></div>
+                                </div>
+
+                                <div class="production fixedHeightProductionPeriod2">
+                                    <div class="production_explain"><p><span>ενέργεια</span> που θα σου
+                                        χρωστάνε →
+                                    </p></div>
+                                    <div
+                                        class="icon icon-producer-solar-panel production_icon"></div>
+                                    <div class="production_text"><p>παραγωγή</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="period">
+                            <div class="month_names">
+                                <p>νοέμβριος - φεβρουάριος</p>
+                            </div>
+                            <div class="energy_bars scrollAnimated thirdPeriodEnergyBars">
+                                <div class="consumption">
+                                    <div
+                                        class="icon icon-consumer-building consumption_icon"></div>
+                                    <div class="consumption_text"><p>κατανάλωση</p></div>
+                                    <div class="consumption_explain"><p>← <span>ενέργεια</span> που σου
+                                        χρωστούσανε
+                                    </p></div>
+                                </div>
+
+                                <div class="production">
+                                    <div
+                                        class="icon icon-producer-solar-panel production_icon"></div>
+                                    <div class="production_text"><p>παραγωγή</p></div>
+                                    <div class="production_empty"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="energy_equalibrium">
+                    <p>ετήσια συνολική παραγωγή = ετήσια συνολική κατανάλωση</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</script>
+<!--</div>-->
+
+<!--<div class="step3of3">-->
+<script type="text/template" id="how_it_works_step3of3_template">
+    <div class="how_it_works_title">
+        <span class="how_it_works_number">③</span>
+        <span class="how_it_works_title_text">μηδενικός λογαριασμός</span>
+    </div>
+
+    <div class="content3of3">
+        <div class="leftdummy3">
+        </div>
+
+        <div class="rightcontent3">
+            <div class="rows">
+                <div class="row">
+                    <div class="icon icon-thumbs-up"></div>
+                    <div class="row_text">
+                        <p>ανεξάρτητο μελλοντικών αυξήσεων</p>
+
+                        <p>στην τιμή του ρεύματος και από άλλους οικονομικούς παράγοντες</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon icon-wallet"></div>
+                    <div class="row_text">
+                        <p>αύξηση ετήσιου προυπολογισμού</p>
+
+                        <p>αύξηση budget λόγω μειωμένων δαπανών</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon icon-globe-lowfi"></div>
+                    <div class="row_text">
+                        <p>Πάρε μια βαθιά ανάσα</p>
+
+                        <p>μόλις έσωσες τον πλανήτη από το φαινόμενο του θερμοκηπίου</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="linechart">
+                <img src="img/net_metering_line_chart_profit.png"/>
+            </div>
+        </div>
+    </div>
+</script>
+<!--</div>-->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv HOW IT WORKS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="how_it_works">-->
+<script type="text/template" id="how_it_works_template">
+
+    <div class="container_wrapper">
+        <div class="container">
+            <article id="how_it_works_step1of3">
+
+            </article>
+
+            <article id="how_it_works_step2of3">
+
+            </article>
+
+            <article id="how_it_works_step3of3">
+
+            </article>
+        </div>
+    </div>
+
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ HOW IT WORKS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!--<div class="form_table_wrapper">-->
+<script type="text/template" id="oikiaka_calc_form_template">
+    <div class="oikiaka_form">
+        <label class="range">Συνολική Ετήσια Κατανάλωση Ηλεκτρικού Ρεύματος</label>
+
+        <div class="yearly_energy"><p class="energy"><%= totalEnergy %></p></div>
+        <input type="range" min="2000" max="35000" step="1" value="<%= totalEnergy %>"/>
+    </div>
+    <!--TODO fix the comma and colon on numbers to be greek style-->
+    <div class="table_wrapper">
+        <table>
+            <tr>
+                <td>
+                    <p>Εκτιμώμενο Συνολικό Όφελος</p>
+                </td>
+
+                <td>
+                    <p class="currency"><%= clientProfit %></p>
+                </td>
+            </tr>
+            <tr>
+                <td><!--<sub>2</sub>-->
+                    <p>Μείωση Ατμοσφαιρικής Ρύπανσης (κιλά διοξειδίου του άνθρακα)</p>
+                </td>
+                <td>
+                    <p class="kgCO2"><%= kgCO2 %></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Πόσα έτη Καθαρού Οφέλους</p>
+
+                    <p>(από την 25ετία)</p>
+                </td>
+                <td>
+                    <p class="years"><%= profitableYears %></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Πόσα έτη για Απόσβεση</p>
+
+                    <p>(από την 25ετία)</p>
+                </td>
+
+                <td>
+                    <p class="years"><%= aposvesiYears %></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Πόσο διαρκεί η Εγκατάσταση</p>
+                </td>
+
+                <td>
+                    <p class="weeks"><%= weeksForInstallation %></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Ενδεικτικό Κόστος Εγκατάστασης</p>
+                </td>
+
+                <td>
+                    <p class="currency"><%= installationCost %></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</script>
+<!--</div>-->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv CALCULATIONS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="calculations">-->
+<script type="text/template" id="calculations_template">
+    <div class="container_wrapper">
+        <div class="container">
+            <div class="question">
+                <p><span>πόση</span> ενέργεια (κιλοβατώρες, kWh) καταναλώνεις σε ένα ολόκληρο έτος</p>
+            </div>
+
+            <div class="answer_text">
+                <p><span>βρες</span> το από τους λογαριασμούς της ΔΕΗ</p>
+            </div>
+
+            <div class="answer_image">
+                <img src="img/logariasmos_dei.png"/>
+            </div>
+
+            <div class="oikiaka_calculations">
+                <div class="calc_title">
+                    <p>Ιδιώτης - Οικιακή Χρήση (Τιμολόγιο Γ1)</p>
+                </div>
+
+                <div class="oikiakaCalcRegion">
+
+                </div>
+
+                <div class="cta_wrapper">
+                    <a href="#contact" class="cta_button">
+                        <span>θέλω</span> να γίνω ενεργειακά ανεξάρτητος
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="calc_case">
+                <div class="calc_title">
+                    <p>Επιχείρηση</p>
+                </div>
+
+                <table>
+                    <tr>
+                        <th></th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>ετήσια</span> κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>45.000kWh</p>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>ετήσια</span> κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>75.000kWh</p>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>ετήσια</span> κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>120.000kWh</p>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>ετήσια</span> κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>150.000kWh</p>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πληρωμές προς ΔΕΗ</p>
+                        </td>
+
+                        <td>
+                            <p class="currency">0</p>
+                        </td>
+                        <td>
+                            <p class="currency">0</p>
+                        </td>
+                        <td>
+                            <p class="currency">0</p>
+                        </td>
+                        <td>
+                            <p class="currency">0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Μείωση Ατμοσφαιρικής Ρύπανσης (κιλά διοξειδίου του άνθρακα, CO₂<!--<sub>2</sub>-->)</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">31.500</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">52.500</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">84.000</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">105.000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσα έτη Καθαρού Κέρδους</p>
+
+                            <p>(από την 25ετία)</p>
+                        </td>
+                        <td>
+                            <p class="years">19.9</p>
+                        </td>
+                        <td>
+                            <p class="years">20</p>
+                        </td>
+                        <td>
+                            <p class="years">20.1</p>
+                        </td>
+                        <td>
+                            <p class="years">20.1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσα έτη για Απόσβεση</p>
+
+                            <p>(από την 25ετία)</p>
+                        </td>
+                        <td>
+                            <p class="years">5.1</p>
+                        </td>
+                        <td>
+                            <p class="years">5</p>
+                        </td>
+                        <td>
+                            <p class="years">4.9</p>
+                        </td>
+                        <td>
+                            <p class="years">4.9</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσες εβδομάδες διαρκεί η Εγκατάσταση</p>
+                        </td>
+                        <td>
+                            <p class="weeks">6</p>
+                        </td>
+                        <td>
+                            <p class="weeks">8</p>
+                        </td>
+                        <td>
+                            <p class="weeks">8</p>
+                        </td>
+                        <td>
+                            <p class="weeks">8</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Ενδεικτικό Κόστος Εγκατάστασης</p>
+                        </td>
+                        <td>
+                            <p class="currency">38.000</p>
+                        </td>
+                        <td>
+                            <p class="currency">62.000</p>
+                        </td>
+                        <td>
+                            <p class="currency">102.000</p>
+                        </td>
+                        <td>
+                            <p class="currency">116.000</p>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div class="cta_wrapper">
+                    <a href="#contact" class="cta_button">
+                        <span>θέλω</span> να γίνω ενεργειακά ανεξάρτητος
+                    </a>
+                </div>
+            </div>
+
+            <!--
+            <div class="calc_case">
+                <div class="calc_title">
+                    <p>Επιχείρηση με σύνδεση Μέσης Τάσης (>15.000V)</p>
+                </div>
+
+                <table>
+                    <tr>
+                        <th></th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>μικρή</span> ετήσια κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>200kWh</p>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>μέση</span> ετήσια κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>200kWh</p>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="header_text">
+                                <p><span>μεγάλη</span> ετήσια κατανάλωση</p>
+                            </div>
+                            <div class="header_energy">
+                                <p>200kWh</p>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Κερδος <span class="currency">(</span>) ανα μηνα</p>
+
+                            <p>λογω μειωμενων δαπανων</p>
+                        </td>
+                        <td>
+                            <p class="currency">100</p>
+                        </td>
+                        <td>
+                            <p class="currency">100</p>
+                        </td>
+                        <td>
+                            <p class="currency">60100</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Μείωση Ατμοσφαιρικής Ρύπανσης (κιλά διοξειδίου του άνθρακα, CO₂</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">1</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">1</p>
+                        </td>
+                        <td>
+                            <p class="kgCO2">1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσα έτη Καθαρού Κέρδους</p>
+
+                            <p>(από την 25ετία)</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσα έτη για Απόσβεση</p>
+
+                            <p>(από την 25ετία)</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                        <td>
+                            <p class="years">23</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Πόσες εβδομάδες διαρκεί η Εγκατάσταση</p>
+                        </td>
+                        <td>
+                            <p class="weeks">23</p>
+                        </td>
+                        <td>
+                            <p class="weeks">23</p>
+                        </td>
+                        <td>
+                            <p class="weeks">23</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Ενδεικτικό Κόστος Εγκατάστασης</p>
+                        </td>
+                        <td>
+                            <p class="currency">99.999</p>
+                        </td>
+                        <td>
+                            <p class="currency">99.999</p>
+                        </td>
+                        <td>
+                            <p class="currency">99.999</p>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div class="cta_wrapper">
+                    <a href="#contact" class="cta_button">
+                        <span>θέλω</span> να γίνω ενεργειακά ανεξάρτητος
+                    </a>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ CALCULATIONS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv PORTFOLIO vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="portfolio">-->
+<script type="text/template" id="portfolio_template">
+    <div class="container">
+        <iframe class="portfoliomap" src="https://www.google.com/maps/d/embed?mid=zDPqzWM3PSxw.kWoFkdvFU1XU"
+                width="100%" height="100%" frameborder="0"></iframe>
+
+        <div class="customcontrols">
+            <!--<div class="customcontrols_relative">-->
+            <a href="#calculations" class="buttonup"><p class="rotated">V</p></a>
+
+            <div class="overlay_button">
+                <p class="overlay_button_text"></p>
+            </div>
+
+            <a href="#testimonials" class="buttondown"><p>V</p></a>
+            <!--</div>-->
+        </div>
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ PORTFOLIO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv TESTIMONIALS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="testimonials">-->
+<script type="text/template" id="testimonials_template">
+    <div class="container">
+        <div class="testimonials_collection">
+            <div class="testimonial">
+                <a href="mailto:imsfe13a@gmail.com">
+                    <div class="subject_photo">
+                        <img src="img/anastasios_koumoutsakos_512x512.png"/>
+                    </div>
+                    <div class="testimonial_quote_wrapper">
+                        <div class="icon icon-quote-left openquote"></div>
+                        <div class="testimonial_text">
+                            <div class="testimonial_quote">
+                                <p>Αν χρειάζεσαι έναν επαγγελματία για να λειτουργούν σωστά τα φωτοβολταϊκα σου
+                                    απευθύνσου στον Πληγορόπουλο</p>
+                            </div>
+
+                            <div class="testimonial_sign_wrapper">
+                                <div class="testimonial_sign">
+                                    <span>Αναστάσιος Κουμουτσάκος</span>
+                                </div>
+                                <div class="testimonial_reference">
+                                    <p>imsfe13a@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-quote-right closequote"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="testimonial">
+                <a href="https://gr.linkedin.com/pub/effie-evanthia-giannakouri/2/b52/a12">
+                    <div class="subject_photo">
+                        <img src="img/effie_giannakouri.jpg"/>
+                    </div>
+                    <div class="testimonial_quote_wrapper">
+                        <div class="icon icon-quote-left openquote"></div>
+                        <div class="testimonial_text">
+                            <div class="testimonial_quote">
+                                <p>Νόμιζα πως ήταν πολύ δύσκολο να βάλω ηλιακά πάνελ στην ταράτσα αλλά όλα κύλησαν
+                                    ρολόι</p>
+                            </div>
+
+                            <div class="testimonial_sign_wrapper">
+                                <div class="testimonial_sign">
+                                    <span>Έφη Γιαννακούρη</span>
+                                </div>
+                                <div class="testimonial_reference">
+                                    <p>https://gr.linkedin.com/pub/effie-evanthia-giannakouri/2/b52/a12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-quote-right closequote"></div>
+                    </div>
+                </a>
+            </div>
+
+            <!--<div class="testimonial">
+                <a href="https://twitter.com/GeorgePligor">
+                    <div class="subject_photo">
+                        <img src="http://lorempixel.com/400/200"/>
+                    </div>
+                    <div class="testimonial_quote_wrapper">
+                        <div class="icon icon-quote-left openquote"></div>
+                        <div class="testimonial_text">
+                            <div class="testimonial_quote">
+                                <p>Δεν περίμενα ένα φωτοβολταικό να αλλάξει τόσο πολύ τη ζωή μου. Τα έξοδα από την ΔΕΗ
+                                    εξαφανίστηκαν. Είναι μαγικό</p>
+                            </div>
+
+                            <div class="testimonial_sign_wrapper">
+                                <div class="testimonial_sign">
+                                    <span>Μάθιου Συνεργάτης</span>
+                                </div>
+                                <div class="testimonial_reference">
+                                    <p>http://matthew.shipowner.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-quote-right closequote"></div>
+                    </div>
+                </a>
+            </div>-->
+
+            <!--<div class="testimonial">
+                <a href="https://twitter.com/GeorgePligor">
+                    <div class="subject_photo">
+                        <img src="http://lorempixel.com/200/400"/>
+                    </div>
+                    <div class="testimonial_quote_wrapper">
+                        <div class="icon icon-quote-left openquote"></div>
+                        <div class="testimonial_text">
+                            <div class="testimonial_quote">
+                                <p>Οι μηχανικοί είναι εγγύηση. Βρήκαν λύσεις σε όλα τα προβλήματα του έργου και
+                                    νοιάζονται για την ασφάλεια. Μπράβο καλή δουλειά!</p>
+                            </div>
+
+                            <div class="testimonial_sign_wrapper">
+                                <div class="testimonial_sign">
+                                    <span>Βικτώρια Secret</span>
+                                </div>
+                                <div class="testimonial_reference">
+                                    <p>https://victoria.secret.gr</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-quote-right closequote"></div>
+                    </div>
+                </a>
+            </div>-->
+
+        </div>
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ TESTIMONIALS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvvvvvvvv CONTACT vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv -->
+<!--<div class="contact">-->
+<script type="text/template" id="contact_template">
+    <div class="container">
+        <div class="title">επικοινωνία</div>
+        <div class="tagcloud">
+            <span class="large">Πληροφορίες</span>
+            <span class="medium">Πως γινεται η εγκατασταση?</span>
+            <span class="large">Τεχνικη Υποστηριξη</span>
+            <span class="medium">Παραγγελιες</span>
+            <span class="small">Τι να κανω εάν είμαι σε πολυκατοικια?</span>
+            <span class="large">Απορίες</span>
+            <span class="large">Τεχνική Μελέτη</span>
+            <span class="medium">Τι ισχύει με τους νόμους?</span>
+            <span class="large">Οικονομική Μελέτη</span>
+            <span class="small">Εγκατάσταση σε στέγη ή σε όμορο οικόπεδο?</span>
+            <span class="medium">Κοστολόγιο</span>
+        </div>
+
+        <div class="anythingelse">
+            <p>και για οτιδήποτε άλλο</p>
+        </div>
+
+        <div class="via">
+            <div class="ontheside">
+                <div class="icon icon-phone"></div>
+            </div>
+            <div class="inthemiddle">
+                <div class="prompt">
+                    <p>Επικοινώνησε Τηλεφωνικώς</p>
+                </div>
+                <div class="data">
+                    <p>695 609 8551</p>
+                </div>
+                <div class="hint">
+                    <p>ή στείλε με sms το τηλέφωνο σου για να σε καλέσουμε</p>
+                </div>
+            </div>
+            <div class="ontheside">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="or"><span>ή</span></div>
+
+        <div class="via">
+            <div class="ontheside">
+                <div class="icon icon-mail"></div>
+            </div>
+
+            <div class="inthemiddle">
+                <a href="mailto:info@pligor.com">
+
+                    <div class="prompt">
+                        <p>Στείλε email</p>
+                    </div>
+                    <div class="data">
+                        <p>
+                            info@pligor.com
+                        </p>
+                    </div>
+                    <div class="hint">
+                        <p>ή στείλε με email το τηλέφωνο σου για να σε καλέσουμε</p>
+                    </div>
+
+                </a>
+            </div>
+            <div class="ontheside">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="copyright copyright_first">
+            <p>1982 - <span class="current_year">XXXX</span>, Γεώργιος Πληγορόπουλος. Με επιφύλαξη κάθε νόμιμου
+                δικαιώματος</p>
+        </div>
+        <div class="copyright">
+            <p>Αττική, Θρακομακεδόνες, Αμύντα 42, ΤΚ 13676</p>
+        </div>
+    </div>
+</script>
+<!--</div>-->
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ CONTACT ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+<!-- ================================================== JS ==================================================== -->
+<!--<script src="js/plugins.js"></script>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+<!--http://stackoverflow.com/questions/5257923/how-to-load-local-script-files-as-fallback-in-cases-where-cdn-are-blocked-unavai/5531821-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(_) === "undefined") &&
+    document.writeln('<script src="bower_components/underscore/underscore-min.js" type="text/javascript"><\/script>')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(Backbone) === "undefined") &&
+    document.writeln('<script src="bower_components/backbone/backbone-min.js" type="text/javascript"><\/script>')
+</script>
+
+
+<!--replacing it with the core of backbone marionette which does not include babysitter, neither wreqr-->
+<!--<script src="bower_components/marionette/lib/backbone.marionette.js" type="text/javascript"></script>-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.1/core/backbone.marionette.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(Marionette) === "undefined") &&
+    document.writeln('<script src="bower_components/marionette/lib/core/backbone.marionette.min.js" type="text/javascript"><\/script>')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.babysitter/0.1.6/backbone.babysitter.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(Backbone.ChildViewContainer) === "undefined") &&
+    document.writeln('<script src="bower_components/backbone.babysitter/lib/backbone.babysitter.min.js" type="text/javascript"><\/script>')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.radio/0.9.0/backbone.radio.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(Backbone.Radio) === "undefined") &&
+    document.writeln('<script src="bower_components/backbone.radio/build/backbone.radio.min.js" type="text/javascript"><\/script>')
+</script>
+
+<!--<script src="http://vjs.zencdn.net/4.12/video.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/4.12.7/video.js" type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(videojs) === "undefined") &&
+    document.writeln('<script src="bower_components/videojs/dist/video-js/video.js" type="text/javascript"><\/script>')
+</script>
+
+<!--TweenMax includes TweenLite, CSSPlugin, EasePack, TimelineLite, TimelineMax, RoundPropsPlugin, BezierPlugin, AttrPlugin, and DirectionalRotationPlugin-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script type="text/javascript">
+    (typeof(TweenMax) === "undefined") &&
+    document.writeln('<script src="bower_components/gsap/src/minified/TweenMax.min.js" type="text/javascript"><\/script>')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof(ScrollMagic) === "undefined") &&
+    document.writeln('<script src="bower_components/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"><\/script>')
+</script>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-text-rotator/1.0.0/jquery.simple-text-rotator.min.js"
+        type="text/javascript"></script>-->
+
+<!--useful for debugging purposes only-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
+<!--there is nothing on the namespace that we could check, therefore we have to include it ourselves-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js" type="text/javascript"></script>-->
+
+
+<!--<script src="bower_components/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>-->
+
+<!--we cannot find an up to date CDN-->
+<!--<script type="text/javascript">
+    (typeof($.fn.waypoint) === "undefined") &&
+    document.writeln('<script src="bower_components/waypoints/lib/jquery.waypoints.min.js"><\/script>')
+</script>-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    (typeof($.scrollTo) === "undefined") &&
+    document.writeln('<script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"><\/script>')
+</script>
+
+
+<script type="text/javascript">
+    document.writeln('<script src="js/main.js?version=' + 1.08 +'" type="text/javascript"><\/script>')
+</script>
+
+<!--currently we are trying with internal modules-->
+<!-- but if you want to use external modules, requirejs is important which is
+    an entirely different approach to including js files in a webpage: -->
+<!--Tutorial: http://www.codebelt.com/typescript/typescript-amd-with-requirejs-tutorial/-->
+<!-- Tutorial: http://www.ringabell.org/en/un-simple-guide-pour-debuter-avec-requirejs/ -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript">window.requirejs || document.write('<script src="js/vendor/require.min.js"><\/script>')</script>-->
+<!-- Keep the require.js close to main.js! even if they say you can put it anywhere and only data-main matters -->
+<!--<script data-main="js/main" src="js/require.js"></script>-->
+<!--Do we really need the "?v=1" after require.js (seen in one example) or not ????-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.js" type="text/javascript"></script>-->
+
+<!--vvvvvvvvvvvvvvvvvvvvvvvvvv Start of Heap Analytics Development Script vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv-->
+<script type="text/javascript">
+    window.heap = window.heap || [], heap.load = function (t, e) {
+        window.heap.appid = t, window.heap.config = e;
+        var a = document.createElement("script");
+        a.type = "text/javascript", a.async = !0, a.src = ("https:" === document.location.protocol ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + t + ".js";
+        var n = document.getElementsByTagName("script")[0];
+        n.parentNode.insertBefore(a, n);
+        for (var o = function (t) {
+            return function () {
+                heap.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+            }
+        }, p = ["clearEventProperties", "identify", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++)heap[p[c]] = o(p[c])
+    };
+    heap.load("695458768");
+</script>
+<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^ End of Heap Analytics Development Script ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+</script>-->
+
+<!--This is redundant since we have a better plugin of handling old browsers-->
+<!--&lt;!&ndash;[if lt IE 8]>-->
+<!--<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>-->
+<!--<![endif]&ndash;&gt;-->
+
+<!--always have that as the last thing in your body to be above all other elements (otherwise these elements might hide it)
+https://github.com/burocratik/Outdated-Browser/tree/master
+that's why you should always prepend the elements to the body from the mainlayout in Marionette-->
+
+
+<div id="outdated">
+    <h6>Το προγραμμα περιηγησης (φυλλομετρητης/browser) που χρησιμοποιεις για το internet δεν ειναι ενημερωμενο!</h6>
+
+    <p>Ενημερωσε το προγραμμα περιηγησης για να δεις αυτη την ιστοσελιδα σωστα.
+        <a target="_blank" id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Ενημερωση του προγραμματος
+            περιηγησης τωρα</a>
+    </p>
+
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+
+    <!--f25648-->
+    <div style="height: 9999px;background: rgba(242, 86, 72, 0.35)"></div>
+</div>
+<!--<script type="text/javascript">
+    //event listener: DOM ready
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function() {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+
+    //call plugin function after DOM ready
+    addLoadEvent(function(){
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+
+            /*
+             "IE11","borderImage"
+             "IE10", "transform" (Default property)
+             "IE9", "boxShadow"
+             "IE8", "borderSpacing"
+             */
+            lowerThan: 'borderImage',
+
+            //languagePath: 'bower_components/outdated-browser/outdatedbrowser/lang/gr.html'    //get it with ajax if necessary
+            languagePath: '' //have it empty if you follow the no ajax approach
+        })
+    });
+</script>-->
+
+</body>
+</html>

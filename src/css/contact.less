@@ -1,0 +1,189 @@
+@import "palette";
+@import "flex_mixins";
+@import "pligor_mixins";
+@import "myconstants";
+
+.contact {
+    background-color: @verydark;
+    width: 100%;
+
+    .container {
+        padding-top: 1%;
+        padding-bottom: 2%;
+
+        max-width: @maxpagewidth;
+        margin-left: auto;
+        margin-right: auto;
+
+        //.debug();
+
+        .flexbox();
+        .flexdirection(column);
+        .flexalignitems(center);
+
+        .title {
+            font-size: 55px;
+            text-transform: capitalize;
+            color: @bright;
+        }
+
+        .tagcloud {
+            margin-top: 2.3em;//2%; //due to firefox issues with percent margins/paddings and flexboxes
+
+            color: @bright;
+
+            max-width: 700px;
+
+            text-align: center;
+
+            span {
+                display: inline-block;
+            }
+
+            .large {
+                font-size: 28px;
+            }
+
+            .medium {
+                font-size: 22px;
+            }
+
+            .small {
+                font-size: 16px;
+            }
+        }
+
+        .anythingelse {
+            @margin: 1.7em; //2%; //due to firefox issues with percent margins/paddings and flexboxes
+
+            margin-top: @margin;
+            margin-bottom: @margin;
+
+            font-size: 24px;
+            color: @bright;
+        }
+
+        .via {
+            .flexalignself(stretch);
+
+            .flexbox();
+
+            min-width: 480px;
+
+            .ontheside {
+                .flex(1 2 0);   //grow, shrink, basis
+
+                //.debug();
+
+                text-align: right;
+
+                padding-right: 1%;
+
+                .icon {
+                    //.debug();
+
+                    .proportionOfLetterWithViewPortWidth(98px, @maxpagewidth);
+
+                    font-size: @variableFontSize;
+                    color: @verybright;
+                }
+            }
+
+            .inthemiddle {
+                .flex(1 1 auto);    //grow, shrink, basis
+
+                //.debug();
+
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .prompt {
+                    font-size: 28px;
+                    color: @verybright;
+                }
+
+                .data {
+                    @margin: 1%;
+
+                    margin-top: @margin;
+                    margin-bottom: @margin;
+
+                    font-size: 42px;
+                    color: @verybright;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .hint {
+                    color: @bright;
+                    font-style: italic;
+                    font-size: 18px;
+
+                    //.resetUnderlinking();
+                    text-decoration: none;
+                }
+            }
+
+
+        }
+
+        .or {
+            color: @dark;
+            font-size: 18px;
+
+            @margin: 2em;//2%;    //due to firefox issues with percent margins/paddings and flexboxes
+
+            margin-top: @margin;
+            margin-bottom: @margin;
+
+            /*.multiplychar(@char, @count, @string: "") when (@count > 0) {
+                @returnedPrefix: "multi";
+
+                @dynamicVar: ~"@{returnedPrefix}@{count}";
+
+                @{dynamicVar}: ~"@{string}@{char}";
+
+                //.multiplychar(@char, @count -1, @@dynamicVar); //next iteration, do loop
+            };*/
+
+            //.multiplychar(0){};
+
+            //.multiplychar("─", 5);  //returns the variable
+
+            //@beforeAndAfter: @multipliedCharacter;
+            @beforeAndAfter: "────────────";    //12
+
+            span::before {
+                content: ~'"@{beforeAndAfter} "';
+            }
+
+            span::after {
+                content: ~'" @{beforeAndAfter}"';
+            }
+        }
+
+        .copyright {
+            color: @dark;
+            font-size: 14px;
+
+            text-align: center;
+
+            p {
+                line-height: 1.38em;
+            }
+        }
+
+        .copyright_first {
+            margin-top: 4em;//3%;   //due to firefox issues with percent margins/paddings and flexboxes
+
+            p::before {
+                content: "© ";
+            }
+        }
+    }
+}

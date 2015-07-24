@@ -1,0 +1,195 @@
+@import "flex_mixins";
+@import "shadow_mixins";
+@import "palette";
+@import "myconstants";
+@import "pligor_mixins";
+@import "nthchild_recipes";
+
+.calculations {
+    width: 100%;
+    background-color: @verydark;
+
+    padding-bottom: 2%;
+
+    .container_wrapper {
+        max-width: @maxpagewidth;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        //.debug();
+        padding-top: 2%;
+
+        .container {
+            margin-left: 1%;
+
+            .minWidthQnA() {
+                min-width: 510px;
+            }
+
+            .question {
+                .minWidthQnA();
+
+                color: @bright;
+                font-size: 30px;
+
+                span {
+                    text-transform: capitalize;
+                }
+
+                p::after {
+                    content: "?";
+                }
+            }
+
+            .answer_text {
+                margin-top: 1%;
+
+                .minWidthQnA();
+
+                color: @bright;
+                font-size: 24px;
+
+                span {
+                    text-transform: capitalize;
+                }
+
+                p::after {
+                    content: ":";
+                }
+            }
+
+            .answer_image {
+                margin-top: 1%;
+
+                .minWidthQnA();
+
+                display: inline-block;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .calc_case {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2%;
+
+                @calcCaseMinWidth: 745px;
+                @calcCasePadding: 10px;
+
+                min-width: @calcCaseMinWidth;
+
+                padding: @calcCasePadding;
+
+                border: 10px solid @bright;
+                border-radius: 10px;
+
+                .calc_title {
+                    color: @bright;
+                    font-size: 36px;
+                }
+
+                table {
+                    margin-top: 2%;
+                    color: @bright;
+
+                    border-spacing: 5px 15px;   //property applies to table only
+                    border-collapse: collapse;  //property applies to table only
+
+                    .currency::after {
+                        content: "€";
+                    }
+
+                    .kgCO2::after {
+                        //content: "kg CO<sub>2</sub>"; //content does not support html
+                        content: "kg CO₂";
+                    }
+
+                    .years::after {
+                        content: " έτη";
+                    }
+
+                    .weeks::after {
+                        content: " εβδομάδες";
+                    }
+
+                    tr {
+                        th,td {
+                            padding-left: 5px;
+                            padding-right: 5px;
+
+                            border-right: 1px solid @dark;
+                        }
+
+                        th {
+                            font-weight: normal;
+
+                            .header_text {
+                                font-size: 16px;
+
+                                span {
+                                    text-transform: capitalize;
+                                }
+                            }
+
+                            .header_energy {
+                                font-size: 24px;
+                            }
+                        }
+
+                        td {
+                            font-size: 22px;
+
+                            padding-top: 1%;
+                            padding-bottom: 1%;
+                        }
+
+                        td:first-child {
+                            font-size: 18px;
+                            width: 30%;
+
+                            border-right: none;
+                        }
+
+                        th:first-child {
+                            border-right: none;
+                        }
+
+                        td:last-child {
+                            border-right: none;
+                        }
+
+                        th:last-child {
+                            border-right: none;
+                        }
+
+                        .all_but_the_first_n(td, 1, {
+                            text-align: center;
+                        });
+                    }
+                }
+
+                .cta_wrapper {
+                    .flexbox();
+                    .flexjustifycontent(flex-end);
+
+                    margin-bottom: 2%;
+                    margin-top: 1%;
+
+                    .cta_button {
+                        .cta();
+
+                        width: 70%;
+
+                        span {
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/test.css" >
+
+</head>
+<body>
+
+<div class="myrangeinput">
+
+</div>
+
+<div id="mydiv" class="test colored"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(function() {
+        var animationEndEvent = "animationend webkitAnimationEnd oanimationend MSAnimationEnd";
+
+        function setAnimationPlayState(elem, state) {
+            elem.style.animationPlayState = state
+            elem.style.mozAnimationPlayState = state
+            elem.style.oAnimationPlayState = state
+            elem.style.webkitAnimationPlayState = state
+        }
+
+        var myDiv = $("#mydiv") //var block = document.getElementById("mydiv")
+
+        myDiv.on("click", function() {
+            $(this).addClass("colored")
+            //console.log(this.style.webkitAnimationPlayState)
+
+            //setAnimationPlayState(this, "initial")
+            setAnimationPlayState(this, "running")
+        })
+
+        myDiv.on(animationEndEvent, function() {
+            //setAnimationPlayState(this, "paused");
+            //console.log("paused")
+            $(this).removeClass("colored")
+        })
+
+
+        $("input").on("change", function(event) {
+            console.log( $(this).val() )
+        })
+    })
+</script>
+</body>
+</html>

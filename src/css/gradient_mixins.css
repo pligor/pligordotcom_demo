@@ -1,0 +1,24 @@
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/

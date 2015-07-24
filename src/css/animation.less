@@ -1,0 +1,57 @@
+.getAnimation(@animationName, @block) {
+    @keyframes @animationName {
+        @block();
+    }
+
+    @-khtml-keyframes @animationName {
+        @block();
+    }
+
+    @-moz-keyframes @animationName {
+        @block();
+    }
+
+    @-ms-keyframes @animationName {
+        @block();
+    }
+
+    @-o-keyframes @animationName {
+        @block();
+    }
+
+    @-webkit-keyframes @animationName {
+        @block();
+    }
+}
+
+/**
+paused|running|initial|inherit
+*/
+.setPlayState(@state) {
+    animation-play-state: @state;
+    -webkit-animation-play-state: @state;
+    -moz-animation-play-state: @state;
+    -o-animation-play-state: @state;
+}
+
+.animationName(@name) {
+    animation-name: @name;
+    -moz-animation-name: @name;
+    -o-animation-name: @name;
+    -webkit-animation-name: @name;
+}
+
+.animationDuration(@duration) {
+    animation-duration: @duration;
+    -moz-animation-duration: @duration;
+    -o-animation-duration: @duration;
+    -webkit-animation-duration: @duration;
+}
+
+.flashAnimation(@color, @flashAnimName: flashAnimation) {
+    .getAnimation(@flashAnimName, {
+        0%   {background-color: transparent;}
+        50%  {background-color: @color;}
+        100% {background-color: transparent;}
+    })
+}

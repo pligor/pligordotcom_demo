@@ -1,0 +1,196 @@
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.testimonials {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 1%;
+}
+.testimonials .container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials .container .testimonials_collection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.testimonials .container .testimonials_collection .testimonial {
+  padding: 1%;
+  min-width: 450px;
+}
+.testimonials .container .testimonials_collection .testimonial a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.testimonials .container .testimonials_collection .testimonial a .subject_photo {
+  -webkit-box-flex: 0 3 auto;
+  -moz-box-flex: 0 3 auto;
+  -webkit-flex: 0 3 auto;
+  -ms-flex: 0 3 auto;
+  flex: 0 3 auto;
+  max-width: 150px;
+  min-width: 75px;
+  max-height: 150px;
+  min-height: 75px;
+  /*.subject_photo_image {
+                            height: 100%;
+
+                            this can be dynamic with style in html element:
+
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                visibility: hidden;
+                            }
+                        }
+
+                        implementation goes like that:
+                        <div class="subject_photo_image" style="background: url("http://placekitten.com/g/200/500");">
+                            <img src="http://bit.ly/1cDbWmj"/> <!-- this is a large image to expand the container -->
+                        </div>
+
+                        */
+}
+.testimonials .container .testimonials_collection .testimonial a .subject_photo img {
+  max-width: 100%;
+  max-height: 150px;
+  -webkit-box-shadow: 0 0 13px 3px #310a63;
+  -moz-box-shadow: 0 0 13px 3px #310a63;
+  box-shadow: 0 0 13px 3px #310a63;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .openquote {
+  color: #310a63;
+  font-size: 2.91666667vmax;
+  padding-left: 2%;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  transform: translate(0px, -10px);
+  -moz-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  -o-transform: translate(0px, -10px);
+  -webkit-transform: translate(0px, -10px);
+}
+@media all and (min-width: 1440px) {
+  .testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .openquote {
+    font-size: 42px;
+  }
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text {
+  color: #554d8a;
+  font-size: 24px;
+  padding-left: 2%;
+  max-width: 17em;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper {
+  font-size: 19px;
+  padding-left: 1%;
+  padding-top: 1%;
+  font-style: italic;
+  color: #a7a2eb;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper .testimonial_sign span::before {
+  content: "── ";
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper .testimonial_reference {
+  text-decoration: underline;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .closequote {
+  color: #310a63;
+  font-size: 2.91666667vmax;
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+  transform: translate(0px, 10px);
+  -moz-transform: translate(0px, 10px);
+  -ms-transform: translate(0px, 10px);
+  -o-transform: translate(0px, 10px);
+  -webkit-transform: translate(0px, 10px);
+}
+@media all and (min-width: 1440px) {
+  .testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .closequote {
+    font-size: 42px;
+  }
+}

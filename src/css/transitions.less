@@ -1,0 +1,29 @@
+//do NOT forget the "s" or "ms" duration
+.transition_ease(@duration) {
+  -webkit-transition: all @duration ease;
+  -moz-transition: all @duration ease;
+  -o-transition: all @duration ease;
+  transition: all @duration ease;
+}
+
+.transition_linear_with_delay(@duration, @delay) {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: @duration;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-delay: @delay;
+
+  -moz-transition-property: all;
+  -moz-transition-duration: @duration;
+  -moz-transition-timing-function: linear;
+  -moz-transition-delay: @delay;
+
+  -o-transition-property: all;
+  -o-transition-duration: @duration;
+  -o-transition-timing-function: linear;
+  -o-transition-delay: @delay;
+
+  transition-property: all;
+  transition-duration: @duration;
+  transition-timing-function: linear;
+  transition-delay: @delay;
+}

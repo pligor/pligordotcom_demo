@@ -1,0 +1,6 @@
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/

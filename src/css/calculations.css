@@ -1,0 +1,206 @@
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.calculations {
+  width: 100%;
+  background-color: #310a63;
+  padding-bottom: 2%;
+}
+.calculations .container_wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+}
+.calculations .container_wrapper .container {
+  margin-left: 1%;
+}
+.calculations .container_wrapper .container .question {
+  min-width: 510px;
+  color: #a7a2eb;
+  font-size: 30px;
+}
+.calculations .container_wrapper .container .question span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .question p::after {
+  content: "?";
+}
+.calculations .container_wrapper .container .answer_text {
+  margin-top: 1%;
+  min-width: 510px;
+  color: #a7a2eb;
+  font-size: 24px;
+}
+.calculations .container_wrapper .container .answer_text span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .answer_text p::after {
+  content: ":";
+}
+.calculations .container_wrapper .container .answer_image {
+  margin-top: 1%;
+  min-width: 510px;
+  display: inline-block;
+}
+.calculations .container_wrapper .container .answer_image img {
+  width: 100%;
+}
+.calculations .container_wrapper .container .calc_case {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  min-width: 745px;
+  padding: 10px;
+  border: 10px solid #a7a2eb;
+  border-radius: 10px;
+}
+.calculations .container_wrapper .container .calc_case .calc_title {
+  color: #a7a2eb;
+  font-size: 36px;
+}
+.calculations .container_wrapper .container .calc_case table {
+  margin-top: 2%;
+  color: #a7a2eb;
+  border-spacing: 5px 15px;
+  border-collapse: collapse;
+}
+.calculations .container_wrapper .container .calc_case table .currency::after {
+  content: "€";
+}
+.calculations .container_wrapper .container .calc_case table .kgCO2::after {
+  content: "kg CO₂";
+}
+.calculations .container_wrapper .container .calc_case table .years::after {
+  content: " έτη";
+}
+.calculations .container_wrapper .container .calc_case table .weeks::after {
+  content: " εβδομάδες";
+}
+.calculations .container_wrapper .container .calc_case table tr th,
+.calculations .container_wrapper .container .calc_case table tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #554d8a;
+}
+.calculations .container_wrapper .container .calc_case table tr th {
+  font-weight: normal;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_text {
+  font-size: 16px;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_text span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_energy {
+  font-size: 24px;
+}
+.calculations .container_wrapper .container .calc_case table tr td {
+  font-size: 22px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.calculations .container_wrapper .container .calc_case table tr td:first-child {
+  font-size: 18px;
+  width: 30%;
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr th:first-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr td:last-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr th:last-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr td:nth-child(n + 2) {
+  text-align: center;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button {
+  display: block;
+  color: #310a63;
+  background-color: #f26101;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  width: 70%;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button p {
+  line-height: 1.38em;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button span {
+  text-transform: capitalize;
+}

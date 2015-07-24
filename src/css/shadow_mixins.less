@@ -1,0 +1,9 @@
+.shadow(@horizontal_length, @vertical_length, @blur_radius, @spread_radius, @color, @opacity) {
+    -webkit-box-shadow: @horizontal_length @vertical_length @blur_radius @spread_radius rgba(red(@color),green(@color),blue(@color),@opacity);
+    -moz-box-shadow:    @horizontal_length @vertical_length @blur_radius @spread_radius rgba(red(@color),green(@color),blue(@color),@opacity);
+    box-shadow:         @horizontal_length @vertical_length @blur_radius @spread_radius rgba(red(@color),green(@color),blue(@color),@opacity);
+}
+
+.text_shadow(@horizontal_len, @vertical_len, @blur, @color) {
+    text-shadow: @horizontal_len @vertical_len @blur @color;
+}

@@ -1,0 +1,128 @@
+.debug(@thick: 1px, @color: greenyellow) {
+    outline: @thick solid @color;
+}
+
+.proportionOfLetterWithViewPortWidth(@initFontSize, @maximumPageWidth) {
+    @variableFontSize: ((100 * @initFontSize) / @maximumPageWidth) * 1vmax;
+}
+
+.uppercase() {
+    text-transform: uppercase;
+}
+
+.clearfix() {
+    &:before,
+    &:after {
+        display: table; // 1
+        content: " "; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.inlineBlocksNoWrapping() {
+    white-space: nowrap;
+}
+
+.hex_to_rgba(@color, @opacity) {
+    @rgba_result: rgba(red(@color), green(@color), blue(@color), @opacity)
+}
+
+.hex_to_rgba(@attribute, @color, @opacity) {
+    @{attribute}: rgba(red(@color), green(@color), blue(@color), @opacity)
+}
+
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.mycalculate(@target, @args) {
+    //~"@{target}: -moz-calc(@{args})"; //Firefox
+    //~"@{target}: -webkit-calc(@{args})"; //WebKit
+    //~"@{target}: -o-calc(@{args})"; //Opera
+    //~"@{target}: calc(@{args})"; //Standard
+
+    @{target}: -moz-calc(@args); //Firefox
+    @{target}: -webkit-calc(@args); //WebKit
+    @{target}: -o-calc(@args); //Opera
+    @{target}: ~"calc(@{args})"; //Standard
+}
+
+.translate(@x, @y) {
+    transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+}
+
+.translate_vertically(@y) {
+    .translate(0px, @y);
+}
+
+.rotateClockwise(@degrees) {
+
+    //official
+    transform: rotate(@degrees);
+
+    //Safari
+    -webkit-transform: rotate(@degrees);
+
+    //Firefox
+    -moz-transform: rotate(@degrees);
+
+    //IE
+    -ms-transform: rotate(@degrees);
+
+    //Opera
+    -o-transform: rotate(@degrees);
+
+    /* Internet Explorer */
+    //<--- who cares about explorer, it's dead!
+    //filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.cta() {
+    display: block; //because we typically apply it on a "<a>"
+
+    color: @verydark;
+    background-color: @ctacolor;
+
+    font-size: 18px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-align: center;
+    text-decoration: none;
+
+    p {
+        line-height: 1.38em;
+    }
+
+    border-radius: 10px;
+
+    @horizontal_length: 0;
+    @vertical_length: 25px;
+    @blur_radius: 20px;
+    @spread_radius: 5px;
+    @color: #000000;
+    @opacity: 0.7;
+    .shadow(@horizontal_length, @vertical_length, @blur_radius, @spread_radius, @color, @opacity);
+}
+
+.cloak(@backgroundColor) {
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: @backgroundColor;
+}

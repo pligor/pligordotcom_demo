@@ -1,0 +1,7 @@
+.all_but_the_first_n(@selector, @n, @curRuleset) {
+    @nthChildArgument: @n + 1;
+
+    @{selector}:nth-child(n + @{nthChildArgument}) {
+        @curRuleset();
+    };
+}

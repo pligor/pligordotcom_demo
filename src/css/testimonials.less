@@ -1,0 +1,165 @@
+@import "palette";
+@import "flex_mixins";
+@import "shadow_mixins";
+@import "pligor_mixins";
+@import "myconstants";
+
+.testimonials {
+    background-color: @verybright;
+    width: 100%;
+
+    padding: 1%;
+
+    .container {
+        max-width: @maxpagewidth;
+        margin-left: auto;
+        margin-right: auto;
+
+        //.debug();
+
+        .testimonials_collection {
+            .flexbox();
+            .flexwrap(wrap);
+
+            .testimonial {
+                padding: 1%;
+
+                min-width: 450px;
+
+                a {
+                    text-decoration: none;
+
+                    .flexbox();
+                    .flexalignitems(center);
+
+                    .subject_photo {
+                        .flex(0 3 auto);
+
+                        @maxImageSize: 150px;
+                        @minImageSize: @maxImageSize / 2;
+
+                        max-width: @maxImageSize;
+                        min-width: @minImageSize;
+
+                        max-height: @maxImageSize;
+                        min-height: @minImageSize;
+
+                        //.debug();
+
+                        //background image solution is not appropriate with shadow
+                        /*.subject_photo_image {
+                            height: 100%;
+
+                            this can be dynamic with style in html element:
+
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                visibility: hidden;
+                            }
+                        }
+
+                        implementation goes like that:
+                        <div class="subject_photo_image" style="background: url("http://placekitten.com/g/200/500");">
+                            <img src="http://bit.ly/1cDbWmj"/> <!-- this is a large image to expand the container -->
+                        </div>
+
+                        */
+
+                        //overflow: hidden;
+
+                        img {
+                            max-width: 100%;
+                            max-height: @maxImageSize;
+
+                            @horizontal_length: 0;
+                            @vertical_length: 0;
+                            @blur_radius: 13px;
+                            @spread_radius: 3px;
+                            @color: @verydark;
+                            @opacity: 1;
+
+                            .shadow(@horizontal_length, @vertical_length, @blur_radius, @spread_radius, @color, @opacity);
+                        }
+                    }
+
+                    .testimonial_quote_wrapper {
+                        .flex(0 1 auto);
+
+                        .flexbox();
+                        .flexalignitems(center);
+
+                        @quoteInitFontSize: 42px;
+
+                        @translateQuoteVertically: 10px;
+
+                        .quote() {
+                            color: @verydark;
+
+                            .proportionOfLetterWithViewPortWidth(@quoteInitFontSize, @maxpagewidth);
+
+                            font-size: @variableFontSize;//((100 *@quoteInitFontSize) / @maxpagewidth) * 1vmax;
+
+                            @media all and (min-width: @maxpagewidth) {
+                                //max-font-size: 40px;    //this is not working in chrome
+                                font-size: @quoteInitFontSize;
+                            }
+                        }
+
+                        .openquote {
+                            .quote();
+
+                            padding-left: 2%;
+
+                            .flexalignself(flex-start);
+
+                            .translate_vertically(-@translateQuoteVertically);
+                        }
+
+                        .testimonial_text {
+                            color: @dark;
+                            font-size: 24px;
+
+                            padding-left: 2%;
+
+                            max-width: 17em;
+
+                            .testimonial_sign_wrapper {
+                                font-size: 19px;
+
+                                padding-left: 1%;
+                                padding-top: 1%;
+
+                                font-style: italic;
+                                color: @bright;
+
+                                .testimonial_sign {
+                                    span::before {
+                                        content: "── ";
+                                    }
+                                }
+
+                                .testimonial_reference {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .closequote {
+                            .quote();
+                            .flexselfalign(flex-end);
+
+                            .translate_vertically(@translateQuoteVertically);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

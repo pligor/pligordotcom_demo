@@ -1,0 +1,198 @@
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.announcement {
+  background-color: #f26101;
+  width: 100%;
+  padding: 1%;
+}
+.announcement .popup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(167, 162, 235, 0.85);
+  background-image: linear-gradient(rgba(242, 242, 242, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 242, 242, 0.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  padding: 40px;
+}
+.announcement .popup .close_button a {
+  color: #f26101;
+  text-decoration: none;
+  background-color: #202020;
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.announcement .popup .close_button div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.announcement .popup .close_button div:first-child {
+  font-size: 36px;
+}
+.announcement .popup .close_button div:last-child {
+  font-size: 24px;
+}
+.announcement .popup iframe {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.announcement .container {
+  margin: auto;
+  max-width: 1440px;
+  min-width: 480px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.announcement .container .ok_button {
+  -webkit-box-flex: 1 1 170px;
+  -moz-box-flex: 1 1 170px;
+  -webkit-flex: 1 1 170px;
+  -ms-flex: 1 1 170px;
+  flex: 1 1 170px;
+}
+.announcement .container .ok_button a {
+  background-color: #f2f2f2;
+  color: #f26101;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.announcement .container .dummy_right {
+  -webkit-box-flex: 1 1 170px;
+  -moz-box-flex: 1 1 170px;
+  -webkit-flex: 1 1 170px;
+  -ms-flex: 1 1 170px;
+  flex: 1 1 170px;
+}
+.announcement .container .main_part {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.announcement .container .main_part a {
+  color: #f2f2f2;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.announcement .container .main_part .left_image {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  width: 3%;
+  margin-left: auto;
+  transform: translate(0px, -5px);
+  -moz-transform: translate(0px, -5px);
+  -ms-transform: translate(0px, -5px);
+  -o-transform: translate(0px, -5px);
+  -webkit-transform: translate(0px, -5px);
+}
+.announcement .container .main_part .left_image > img {
+  width: 100%;
+}
+.announcement .container .main_part .right_image {
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+  margin-right: auto;
+  font-size: 24px;
+  transform: translate(0px, 5px);
+  -moz-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  -o-transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+}
+.announcement .container .main_part .center_text {
+  text-align: center;
+  padding: 10px;
+}
+.announcement .container .main_part .center_text div:first-child {
+  font-size: 24px;
+  padding-bottom: 3px;
+}
+.announcement .container .main_part .center_text div:last-child {
+  font-size: 20px;
+  padding-top: 3px;
+}

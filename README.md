@@ -1,0 +1,1 @@
+You should execute `gulp dist` if you want to build and test for yourself the distribution project

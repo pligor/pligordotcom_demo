@@ -1,0 +1,39 @@
+@import "palette";
+//@import "flex_mixins";
+//@import "shadow_mixins";
+//@import "myconstants";
+@import "pligor_mixins";
+@import "transitions";
+@import "animation";
+@import "palette";
+@import "rangeinput";
+
+body {
+    background-color: @verydark;
+}
+
+.test {
+    width: 200px;
+    height: 300px;
+    .debug();
+    //.transition_ease(100ms)
+}
+
+.flashAnimation(blue, myFlashAnim);
+
+.colored {
+    .animationName(myFlashAnim);
+    .animationDuration(0.5s);
+    .setPlayState(paused);
+}
+
+div.myrangeinput {
+    .rangeInput(
+        @track-color: @dark,
+        @track-height: 35px,
+        @thumbcolor: @verybright,
+        @thumb-height: 70px,
+        @thumb-border-color: @ctacolor,
+        @thumb-width: 35px
+    )
+}

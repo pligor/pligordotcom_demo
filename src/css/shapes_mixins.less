@@ -1,0 +1,60 @@
+.uptriangle(@color: blue, @baseSize: 120px, @sidesSize: 60px) {
+    width: 0;
+    height: 0;
+    border-bottom: @sidesSize solid @color;
+    border-left: @baseSize solid transparent;
+    border-right: @baseSize solid transparent;
+}
+
+.downtriangle(@color: blue, @baseSize: 120px, @sidesSize: 60px) {
+    width: 0;
+    height: 0;
+    border-top: @sidesSize solid @color;
+    border-left: @baseSize solid transparent;
+    border-right: @baseSize solid transparent;
+}
+
+.halfoval(@width, @height, @color, @direction) when (@direction = up)  {
+    width: @width;
+    height: @height;
+    background-color: @color;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+}
+
+.halfoval(@width, @height, @color, @direction) when (@direction = down)  {
+    width: @width;
+    height: @height;
+    background-color: @color;
+
+    border-bottom-left-radius: 50% 100%;
+    border-bottom-right-radius: 50% 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.halfoval(@width, @height, @color, @direction) when (@direction = right)  {
+    width: @width;
+    height: @height;
+    background-color: @color;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 100% 50%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 100% 50%;
+}
+
+.halfoval(@width, @height, @color, @direction) when (@direction = left)  {
+    width: @width;
+    height: @height;
+    background-color: @color;
+
+    border-bottom-left-radius: 100% 50%;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 100% 50%;
+    border-top-right-radius: 0;
+}

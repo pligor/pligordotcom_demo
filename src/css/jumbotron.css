@@ -1,0 +1,177 @@
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+@import url(http://fonts.googleapis.com/css?family=Flamenco:400);
+.jumbotron {
+  width: 100%;
+  min-height: 450px;
+  min-width: 800px;
+  position: relative;
+}
+.jumbotron_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background-image: url("../img/jumbotron_background_first_frame.jpg");
+    background-size: cover;
+    background-position: center center;//center 30%;*/
+  width: 100%;
+  height: 100%;
+}
+.jumbotron_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+a.learn_more {
+  display: block;
+  color: #f2f2f2;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  /*.hex_to_rgba(@dark, 0.6);
+    background-color: @rgba_result;*/
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  pointer-events: all;
+}
+a.learn_more p:last-child {
+  font-size: 36px;
+  font-family: Flamenco, cursive;
+}
+.jumbotron_center {
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 300px;
+  color: #310a63;
+  pointer-events: all;
+}
+.what_we_do_title {
+  font-size: 54px;
+  text-align: center;
+}
+.what_we_do_subtitle {
+  font-size: 26px;
+  margin-top: 15px;
+  text-align: center;
+}
+.main_cta {
+  display: block;
+  color: #310a63;
+  background-color: #f26101;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  width: 40%;
+  margin-top: auto;
+}
+.main_cta p {
+  line-height: 1.38em;
+}

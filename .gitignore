@@ -1,0 +1,6 @@
+archive
+node_modules
+.idea/
+dist/
+src/ts/**/*.js
+src/ts/**/*.js.map

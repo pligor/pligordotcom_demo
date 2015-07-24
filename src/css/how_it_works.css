@@ -1,0 +1,665 @@
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.how_it_works {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-bottom: 1%;
+  /*.pvpanels > div {
+        vertical-align: top;
+    }*/
+}
+.how_it_works .container_wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how_it_works .container_wrapper .container {
+  margin-left: 1%;
+}
+.how_it_works .how_it_works_title {
+  white-space: nowrap;
+}
+.how_it_works span.how_it_works_number {
+  font-size: 90px;
+  font-weight: normal;
+  color: #554d8a;
+  vertical-align: middle;
+}
+.how_it_works span.how_it_works_title_text {
+  vertical-align: middle;
+  font-size: 48px;
+  color: #554d8a;
+}
+.how_it_works .step3of3 {
+  margin-top: 4%;
+}
+.how_it_works .step3of3 .how_it_works_title_text {
+  text-transform: capitalize;
+}
+.how_it_works .step3of3 .content3of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1%;
+}
+.how_it_works .step3of3 .content3of3 .leftdummy3 {
+  width: 90px;
+  -webkit-box-flex: 0 10 auto;
+  -moz-box-flex: 0 10 auto;
+  -webkit-flex: 0 10 auto;
+  -ms-flex: 0 10 auto;
+  flex: 0 10 auto;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 645px;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .icon {
+  font-size: 90px;
+  color: #310a63;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text {
+  margin-left: 2%;
+  color: #554d8a;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text p:first-child {
+  font-size: 36px;
+  text-transform: capitalize;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text p:last-child {
+  font-size: 18px;
+  padding-left: 2%;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .linechart {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 2%;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .linechart img {
+  width: 100%;
+  min-width: 200px;
+}
+.how_it_works .step2of3 {
+  margin-top: 5%;
+  /*.title2 {
+            @lastYearWrapperMinWidth: 465px;
+
+            .inlineBlocksNoWrapping();
+            //.flexwrapper();
+
+            min-width: @lastYearWrapperMinWidth + @howItWorksNumberSize;
+
+            .inlineBlocksNoWrapping();
+
+            .number2 {
+                .howItWorksNumber();
+                display: inline-block;
+                vertical-align: middle;
+                width: @howItWorksNumberSize;
+            }
+
+            .number2_text {
+
+            }
+        }*/
+}
+.how_it_works .step2of3 .content2of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 2%;
+}
+.how_it_works .step2of3 .content2of3 .leftdummy {
+  width: 90px;
+  -webkit-box-flex: 0 10 auto;
+  -moz-box-flex: 0 10 auto;
+  -webkit-flex: 0 10 auto;
+  -ms-flex: 0 10 auto;
+  flex: 0 10 auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 600px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper {
+  color: #a7a2eb;
+  font-size: 0;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper .last_year_row {
+  font-size: 32px;
+  line-height: 1.38em;
+  text-decoration: line-through;
+  display: inline-block;
+  vertical-align: middle;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper div:last-child .last_year_row {
+  text-transform: uppercase;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper .last_year {
+  display: inline-block;
+  font-size: 18px;
+  transform: rotate(-28deg);
+  -webkit-transform: rotate(-28deg);
+  -moz-transform: rotate(-28deg);
+  -ms-transform: rotate(-28deg);
+  -o-transform: rotate(-28deg);
+  /* Internet Explorer */
+  color: #310a63;
+  text-transform: uppercase;
+  margin-left: -2em;
+  vertical-align: middle;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .energy_netting_text {
+  margin-top: 2%;
+  font-size: 32px;
+  color: #554d8a;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .for_example {
+  margin-top: 3%;
+  font-style: italic;
+  color: #554d8a;
+  font-size: 18px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example {
+  margin-top: 1%;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .energy_equalibrium {
+  margin-top: 2%;
+  text-align: center;
+  color: #310a63;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 24px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .fixedHeightConsumptionPeriod2 {
+  height: 168px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .fixedHeightProductionPeriod2 {
+  height: 216px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-top: 1px solid #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 744px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .disabled_period > p {
+  color: #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-right: 2px dashed #554d8a;
+  border-left: 2px dashed #554d8a;
+  height: 250px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .month_names {
+  text-align: center;
+  font-size: 24px;
+  color: #554d8a;
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars.scrollAnimated {
+  overflow: hidden;
+  height: 0;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #310a63;
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_explain {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px dotted #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_explain span {
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_text {
+  text-transform: capitalize;
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_icon {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #310a63;
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_text {
+  text-transform: capitalize;
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_icon {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_explain {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px dotted #a7a2eb;
+  margin-bottom: auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_explain span {
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_empty {
+  height: 50px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period:first-child {
+  border-left: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period:last-child {
+  border-right: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row:last-child {
+  padding-bottom: 0;
+}
+.how_it_works .step1of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.how_it_works .step1of3 .leftcolumn {
+  max-width: 840px;
+  min-width: 625px;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram {
+  margin-left: 4%;
+  margin-top: 5%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .produces_arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 2em solid #310a63;
+  border-left: 7em solid transparent;
+  border-right: 7em solid transparent;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .produces_text {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: inline-block;
+  width: 80%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer {
+  margin-top: 0.3em;
+  width: 100%;
+  background-color: #310a63;
+  color: #a7a2eb;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer div {
+  font-size: 120px;
+  padding-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer p {
+  font-size: 32px;
+  padding-bottom: 1%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumes_text {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: inline-block;
+  width: 80%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumes_arrow {
+  width: 0;
+  height: 0;
+  border-top: 2em solid #310a63;
+  border-left: 7em solid transparent;
+  border-right: 7em solid transparent;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer {
+  margin-top: 0.3em;
+  width: 100%;
+  background-color: #310a63;
+  color: #a7a2eb;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer div {
+  font-size: 120px;
+  padding-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer p {
+  font-size: 32px;
+  padding-bottom: 1%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:first-child {
+  font-size: 90px;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:first-child p {
+  padding-top: 0.2em;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:last-child {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 60px;
+}
+.how_it_works .step1of3 .leftcolumn ul {
+  list-style-type: none;
+  margin-top: 1%;
+  margin-left: 4%;
+  color: #554d8a;
+  /*li:before {
+                    content: "✓";
+                    font-size: 72px;
+                    color: @verydark;
+                }*/
+}
+.how_it_works .step1of3 .leftcolumn ul li {
+  white-space: nowrap;
+  margin-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:first-child {
+  font-size: 90px;
+  color: #310a63;
+  display: inline-block;
+  vertical-align: middle;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:last-child {
+  font-size: 32px;
+  display: inline-block;
+  max-width: 17em;
+  white-space: normal;
+  vertical-align: middle;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:last-child p {
+  line-height: 1.4em;
+}
+.how_it_works .step1of3 .rightcolumn {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 380px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.how_it_works .pvpanels {
+  white-space: nowrap;
+  font-size: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  transform: translate(0px, -40px);
+  -moz-transform: translate(0px, -40px);
+  -ms-transform: translate(0px, -40px);
+  -o-transform: translate(0px, -40px);
+  -webkit-transform: translate(0px, -40px);
+}
+.how_it_works .caption {
+  width: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #554d8a;
+  color: #a7a2eb;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+}
+.how_it_works .pvpanels > div.image {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.how_it_works .pvpanels img {
+  vertical-align: top;
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+}
+.how_it_works .smiling_engineer > img {
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+}

@@ -1,0 +1,105 @@
+//https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+.flexbox() {    //alias for flex wrapper
+    .flexwrapper();
+}
+
+.flexwrapper() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+//flex grow, flex shrink, flex basis
+//default: 0 1 auto
+.flex(@values) {
+    -webkit-box-flex: @values;
+    -moz-box-flex: @values;
+    -webkit-flex: @values;
+    -ms-flex: @values;
+    flex: @values;
+}
+
+.flexwrap(@value) {
+    flex-wrap: @value;
+    -ms-flex-wrap: @value;
+    -webkit-flex-wrap: @value;
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+.flexdirection(@value) {
+    flex-direction: @value;
+    -ms-flex-direction: @value;
+    -webkit-flex-direction: @value;
+}
+
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+.flexjustifycontent(@value) {
+    justify-content: @value;
+    -webkit-justify-content: @value;
+}
+
+.flexalignitems(@value) {
+    align-items: @value;
+    -webkit-align-items: @value;
+}
+
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+.flexalignself(@value) {
+    //default is "stretch" for chrome as we have noticed
+    align-self: @value;
+    -webkit-align-self: @value;
+}
+.flexselfalign(@value) {    //alias
+    .flexalignself(@value);
+}
+
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+.flex_get_highshrink_lowshrink(@ratio: 100) {
+    @highShrinkValues: 0 @ratio auto;
+
+    @highshrink: {
+        -webkit-box-flex: @highShrinkValues;
+        -moz-box-flex: @highShrinkValues;
+        -webkit-flex: @highShrinkValues;
+        -ms-flex: @highShrinkValues;
+        flex: @highShrinkValues;
+    };
+
+    @lowShrinkValues: 0 1 auto;
+
+    @lowshrink: {
+        -webkit-box-flex: @lowShrinkValues;
+        -moz-box-flex: @lowShrinkValues;
+        -webkit-flex: @lowShrinkValues;
+        -ms-flex: @lowShrinkValues;
+        flex: @lowShrinkValues;
+    };
+}

@@ -1,0 +1,2970 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+header {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  margin: 0;
+  padding: 0;
+}
+p,
+span,
+label {
+  line-height: 1em;
+}
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?9330572');
+  src: url('../font/fontello.eot?9330572#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?9330572') format('woff'),
+       url('../font/fontello.ttf?9330572') format('truetype'),
+       url('../font/fontello.svg?9330572#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?9330572#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-file-pdf:before { content: '\e800'; } /* '' */
+.icon-turn-on-off:before { content: '\e801'; } /* '' */
+.icon-electrical-power:before { content: '\e802'; } /* '' */
+.icon-consumer-building:before { content: '\e803'; } /* '' */
+.icon-producer-solar-panel:before { content: '\e804'; } /* '' */
+.icon-globe-hifi:before { content: '\e805'; } /* '' */
+.icon-quote-left:before { content: '\e806'; } /* '' */
+.icon-globe-lowfi:before { content: '\e807'; } /* '' */
+.icon-thumbs-up:before { content: '\e808'; } /* '' */
+.icon-phone:before { content: '\e809'; } /* '' */
+.icon-savings:before { content: '\e80a'; } /* '' */
+.icon-cancel:before { content: '\e80b'; } /* '' */
+.icon-quote-right:before { content: '\e80c'; } /* '' */
+.icon-wallet:before { content: '\e80d'; } /* '' */
+.icon-mail:before { content: '\e80e'; } /* '' */
+.icon-play-outline:before { content: '\e80f'; } /* '' */
+.icon-pause-outline:before { content: '\e810'; } /* '' */
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+section#header {
+  background-color: #310a63;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.toppanel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.logo_wrapper {
+  font-size: 0;
+  white-space: nowrap;
+}
+.pligor_logo {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f2f2f2;
+  padding: 2px;
+  border-radius: 7%;
+}
+.pligor_logo img {
+  max-height: 100%;
+}
+.logotitles_wrapper {
+  display: inline-block;
+  padding-left: 5px;
+}
+.logo_title {
+  text-transform: uppercase;
+  color: #f2f2f2;
+  font-size: 37px;
+}
+.logo_subtitle {
+  text-transform: uppercase;
+  color: #f2f2f2;
+  font-size: 23px;
+  text-align: right;
+}
+.mainmenu_wrapper {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.mainmenu {
+  margin-top: auto;
+  margin-bottom: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+}
+.mainmenu > li {
+  -webkit-box-flex: 1 1 150px;
+  -moz-box-flex: 1 1 150px;
+  -webkit-flex: 1 1 150px;
+  -ms-flex: 1 1 150px;
+  flex: 1 1 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 150px;
+}
+.mainmenu > li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  display: block;
+}
+.mainmenu > li a > div:first-child {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.mainmenu > li a:hover {
+  text-decoration: underline;
+}
+/*.mainmenu > li:first-child {
+    margin-left: 0;
+}
+
+.mainmenu > li:last-child {
+    margin-right: 0;
+}*/
+
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+@import url(http://fonts.googleapis.com/css?family=Flamenco:400);
+.jumbotron {
+  width: 100%;
+  min-height: 450px;
+  min-width: 800px;
+  position: relative;
+}
+.jumbotron_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background-image: url("../img/jumbotron_background_first_frame.jpg");
+    background-size: cover;
+    background-position: center center;//center 30%;*/
+  width: 100%;
+  height: 100%;
+}
+.jumbotron_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+a.learn_more {
+  display: block;
+  color: #f2f2f2;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  /*.hex_to_rgba(@dark, 0.6);
+    background-color: @rgba_result;*/
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  pointer-events: all;
+}
+a.learn_more p:last-child {
+  font-size: 36px;
+  font-family: Flamenco, cursive;
+}
+.jumbotron_center {
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 300px;
+  color: #310a63;
+  pointer-events: all;
+}
+.what_we_do_title {
+  font-size: 54px;
+  text-align: center;
+}
+.what_we_do_subtitle {
+  font-size: 26px;
+  margin-top: 15px;
+  text-align: center;
+}
+.main_cta {
+  display: block;
+  color: #310a63;
+  background-color: #f26101;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  width: 40%;
+  margin-top: auto;
+}
+.main_cta p {
+  line-height: 1.38em;
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.jumbotron_background_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.jumbotron_background_container .control_button {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  padding: 1%;
+  font-size: 1.5em;
+  color: #a7a2eb;
+  border: 0.1em solid #a7a2eb;
+  border-radius: 100%;
+}
+.jumbotron_background_container .jumbotron_background_video_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.jumbotron_background_container .jumbotron_background_video_wrapper .video_wrapper {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*#jumbotron_background_video {
+
+            }*/
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.announcement {
+  background-color: #f26101;
+  width: 100%;
+  padding: 1%;
+}
+.announcement .popup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(167, 162, 235, 0.85);
+  background-image: linear-gradient(rgba(242, 242, 242, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(242, 242, 242, 0.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  padding: 40px;
+}
+.announcement .popup .close_button a {
+  color: #f26101;
+  text-decoration: none;
+  background-color: #202020;
+  display: inline-block;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.announcement .popup .close_button div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.announcement .popup .close_button div:first-child {
+  font-size: 36px;
+}
+.announcement .popup .close_button div:last-child {
+  font-size: 24px;
+}
+.announcement .popup iframe {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.announcement .container {
+  margin: auto;
+  max-width: 1440px;
+  min-width: 480px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.announcement .container .ok_button {
+  -webkit-box-flex: 1 1 170px;
+  -moz-box-flex: 1 1 170px;
+  -webkit-flex: 1 1 170px;
+  -ms-flex: 1 1 170px;
+  flex: 1 1 170px;
+}
+.announcement .container .ok_button a {
+  background-color: #f2f2f2;
+  color: #f26101;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.announcement .container .dummy_right {
+  -webkit-box-flex: 1 1 170px;
+  -moz-box-flex: 1 1 170px;
+  -webkit-flex: 1 1 170px;
+  -ms-flex: 1 1 170px;
+  flex: 1 1 170px;
+}
+.announcement .container .main_part {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.announcement .container .main_part a {
+  color: #f2f2f2;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.announcement .container .main_part .left_image {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  width: 3%;
+  margin-left: auto;
+  transform: translate(0px, -5px);
+  -moz-transform: translate(0px, -5px);
+  -ms-transform: translate(0px, -5px);
+  -o-transform: translate(0px, -5px);
+  -webkit-transform: translate(0px, -5px);
+}
+.announcement .container .main_part .left_image > img {
+  width: 100%;
+}
+.announcement .container .main_part .right_image {
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+  margin-right: auto;
+  font-size: 24px;
+  transform: translate(0px, 5px);
+  -moz-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  -o-transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+}
+.announcement .container .main_part .center_text {
+  text-align: center;
+  padding: 10px;
+}
+.announcement .container .main_part .center_text div:first-child {
+  font-size: 24px;
+  padding-bottom: 3px;
+}
+.announcement .container .main_part .center_text div:last-child {
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.how_it_works {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-bottom: 1%;
+  /*.pvpanels > div {
+        vertical-align: top;
+    }*/
+}
+.how_it_works .container_wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how_it_works .container_wrapper .container {
+  margin-left: 1%;
+}
+.how_it_works .how_it_works_title {
+  white-space: nowrap;
+}
+.how_it_works span.how_it_works_number {
+  font-size: 90px;
+  font-weight: normal;
+  color: #554d8a;
+  vertical-align: middle;
+}
+.how_it_works span.how_it_works_title_text {
+  vertical-align: middle;
+  font-size: 48px;
+  color: #554d8a;
+}
+.how_it_works .step3of3 {
+  margin-top: 4%;
+}
+.how_it_works .step3of3 .how_it_works_title_text {
+  text-transform: capitalize;
+}
+.how_it_works .step3of3 .content3of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1%;
+}
+.how_it_works .step3of3 .content3of3 .leftdummy3 {
+  width: 90px;
+  -webkit-box-flex: 0 10 auto;
+  -moz-box-flex: 0 10 auto;
+  -webkit-flex: 0 10 auto;
+  -ms-flex: 0 10 auto;
+  flex: 0 10 auto;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 645px;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .icon {
+  font-size: 90px;
+  color: #310a63;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text {
+  margin-left: 2%;
+  color: #554d8a;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text p:first-child {
+  font-size: 36px;
+  text-transform: capitalize;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .rows .row .row_text p:last-child {
+  font-size: 18px;
+  padding-left: 2%;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .linechart {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 2%;
+}
+.how_it_works .step3of3 .content3of3 .rightcontent3 .linechart img {
+  width: 100%;
+  min-width: 200px;
+}
+.how_it_works .step2of3 {
+  margin-top: 5%;
+  /*.title2 {
+            @lastYearWrapperMinWidth: 465px;
+
+            .inlineBlocksNoWrapping();
+            //.flexwrapper();
+
+            min-width: @lastYearWrapperMinWidth + @howItWorksNumberSize;
+
+            .inlineBlocksNoWrapping();
+
+            .number2 {
+                .howItWorksNumber();
+                display: inline-block;
+                vertical-align: middle;
+                width: @howItWorksNumberSize;
+            }
+
+            .number2_text {
+
+            }
+        }*/
+}
+.how_it_works .step2of3 .content2of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 2%;
+}
+.how_it_works .step2of3 .content2of3 .leftdummy {
+  width: 90px;
+  -webkit-box-flex: 0 10 auto;
+  -moz-box-flex: 0 10 auto;
+  -webkit-flex: 0 10 auto;
+  -ms-flex: 0 10 auto;
+  flex: 0 10 auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 600px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper {
+  color: #a7a2eb;
+  font-size: 0;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper .last_year_row {
+  font-size: 32px;
+  line-height: 1.38em;
+  text-decoration: line-through;
+  display: inline-block;
+  vertical-align: middle;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper div:last-child .last_year_row {
+  text-transform: uppercase;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .last_year_wrapper .last_year {
+  display: inline-block;
+  font-size: 18px;
+  transform: rotate(-28deg);
+  -webkit-transform: rotate(-28deg);
+  -moz-transform: rotate(-28deg);
+  -ms-transform: rotate(-28deg);
+  -o-transform: rotate(-28deg);
+  /* Internet Explorer */
+  color: #310a63;
+  text-transform: uppercase;
+  margin-left: -2em;
+  vertical-align: middle;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .energy_netting_text {
+  margin-top: 2%;
+  font-size: 32px;
+  color: #554d8a;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .for_example {
+  margin-top: 3%;
+  font-style: italic;
+  color: #554d8a;
+  font-size: 18px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example {
+  margin-top: 1%;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .energy_equalibrium {
+  margin-top: 2%;
+  text-align: center;
+  color: #310a63;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 24px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .fixedHeightConsumptionPeriod2 {
+  height: 168px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .fixedHeightProductionPeriod2 {
+  height: 216px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-top: 1px solid #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 744px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .disabled_period > p {
+  color: #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-right: 2px dashed #554d8a;
+  border-left: 2px dashed #554d8a;
+  height: 250px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .month_names {
+  text-align: center;
+  font-size: 24px;
+  color: #554d8a;
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars.scrollAnimated {
+  overflow: hidden;
+  height: 0;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #310a63;
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_explain {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px dotted #a7a2eb;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_explain span {
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_text {
+  text-transform: capitalize;
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .consumption .consumption_icon {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #310a63;
+  margin-left: 7px;
+  margin-right: 7px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_text {
+  text-transform: capitalize;
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_icon {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_explain {
+  color: #a7a2eb;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px dotted #a7a2eb;
+  margin-bottom: auto;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_explain span {
+  text-transform: capitalize;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period .energy_bars .production .production_empty {
+  height: 50px;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period:first-child {
+  border-left: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row .threeperiods .period:last-child {
+  border-right: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.how_it_works .step2of3 .content2of3 .rightcontent .example .periods_row:last-child {
+  padding-bottom: 0;
+}
+.how_it_works .step1of3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.how_it_works .step1of3 .leftcolumn {
+  max-width: 840px;
+  min-width: 625px;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram {
+  margin-left: 4%;
+  margin-top: 5%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .produces_arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 2em solid #310a63;
+  border-left: 7em solid transparent;
+  border-right: 7em solid transparent;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .produces_text {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: inline-block;
+  width: 80%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer {
+  margin-top: 0.3em;
+  width: 100%;
+  background-color: #310a63;
+  color: #a7a2eb;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer div {
+  font-size: 120px;
+  padding-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .producer_wrapper .producer p {
+  font-size: 32px;
+  padding-bottom: 1%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumes_text {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: inline-block;
+  width: 80%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumes_arrow {
+  width: 0;
+  height: 0;
+  border-top: 2em solid #310a63;
+  border-left: 7em solid transparent;
+  border-right: 7em solid transparent;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer {
+  margin-top: 0.3em;
+  width: 100%;
+  background-color: #310a63;
+  color: #a7a2eb;
+  text-align: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer div {
+  font-size: 120px;
+  padding-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .consumer_producer .consumer_wrapper .consumer p {
+  font-size: 32px;
+  padding-bottom: 1%;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid {
+  background-color: #310a63;
+  color: #a7a2eb;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:first-child {
+  font-size: 90px;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:first-child p {
+  padding-top: 0.2em;
+}
+.how_it_works .step1of3 .leftcolumn .consume_produce_diagram .power_grid div:last-child {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 60px;
+}
+.how_it_works .step1of3 .leftcolumn ul {
+  list-style-type: none;
+  margin-top: 1%;
+  margin-left: 4%;
+  color: #554d8a;
+  /*li:before {
+                    content: "✓";
+                    font-size: 72px;
+                    color: @verydark;
+                }*/
+}
+.how_it_works .step1of3 .leftcolumn ul li {
+  white-space: nowrap;
+  margin-top: 4%;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:first-child {
+  font-size: 90px;
+  color: #310a63;
+  display: inline-block;
+  vertical-align: middle;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:last-child {
+  font-size: 32px;
+  display: inline-block;
+  max-width: 17em;
+  white-space: normal;
+  vertical-align: middle;
+}
+.how_it_works .step1of3 .leftcolumn ul li div:last-child p {
+  line-height: 1.4em;
+}
+.how_it_works .step1of3 .rightcolumn {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 380px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.how_it_works .pvpanels {
+  white-space: nowrap;
+  font-size: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  transform: translate(0px, -40px);
+  -moz-transform: translate(0px, -40px);
+  -ms-transform: translate(0px, -40px);
+  -o-transform: translate(0px, -40px);
+  -webkit-transform: translate(0px, -40px);
+}
+.how_it_works .caption {
+  width: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #554d8a;
+  color: #a7a2eb;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+}
+.how_it_works .pvpanels > div.image {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.how_it_works .pvpanels img {
+  vertical-align: top;
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+}
+.how_it_works .smiling_engineer > img {
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.calculations {
+  width: 100%;
+  background-color: #310a63;
+  padding-bottom: 2%;
+}
+.calculations .container_wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+}
+.calculations .container_wrapper .container {
+  margin-left: 1%;
+}
+.calculations .container_wrapper .container .question {
+  min-width: 510px;
+  color: #a7a2eb;
+  font-size: 30px;
+}
+.calculations .container_wrapper .container .question span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .question p::after {
+  content: "?";
+}
+.calculations .container_wrapper .container .answer_text {
+  margin-top: 1%;
+  min-width: 510px;
+  color: #a7a2eb;
+  font-size: 24px;
+}
+.calculations .container_wrapper .container .answer_text span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .answer_text p::after {
+  content: ":";
+}
+.calculations .container_wrapper .container .answer_image {
+  margin-top: 1%;
+  min-width: 510px;
+  display: inline-block;
+}
+.calculations .container_wrapper .container .answer_image img {
+  width: 100%;
+}
+.calculations .container_wrapper .container .calc_case {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  min-width: 745px;
+  padding: 10px;
+  border: 10px solid #a7a2eb;
+  border-radius: 10px;
+}
+.calculations .container_wrapper .container .calc_case .calc_title {
+  color: #a7a2eb;
+  font-size: 36px;
+}
+.calculations .container_wrapper .container .calc_case table {
+  margin-top: 2%;
+  color: #a7a2eb;
+  border-spacing: 5px 15px;
+  border-collapse: collapse;
+}
+.calculations .container_wrapper .container .calc_case table .currency::after {
+  content: "€";
+}
+.calculations .container_wrapper .container .calc_case table .kgCO2::after {
+  content: "kg CO₂";
+}
+.calculations .container_wrapper .container .calc_case table .years::after {
+  content: " έτη";
+}
+.calculations .container_wrapper .container .calc_case table .weeks::after {
+  content: " εβδομάδες";
+}
+.calculations .container_wrapper .container .calc_case table tr th,
+.calculations .container_wrapper .container .calc_case table tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #554d8a;
+}
+.calculations .container_wrapper .container .calc_case table tr th {
+  font-weight: normal;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_text {
+  font-size: 16px;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_text span {
+  text-transform: capitalize;
+}
+.calculations .container_wrapper .container .calc_case table tr th .header_energy {
+  font-size: 24px;
+}
+.calculations .container_wrapper .container .calc_case table tr td {
+  font-size: 22px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.calculations .container_wrapper .container .calc_case table tr td:first-child {
+  font-size: 18px;
+  width: 30%;
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr th:first-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr td:last-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr th:last-child {
+  border-right: none;
+}
+.calculations .container_wrapper .container .calc_case table tr td:nth-child(n + 2) {
+  text-align: center;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button {
+  display: block;
+  color: #310a63;
+  background-color: #f26101;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  width: 70%;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button p {
+  line-height: 1.38em;
+}
+.calculations .container_wrapper .container .calc_case .cta_wrapper .cta_button span {
+  text-transform: capitalize;
+}
+
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.oikiaka_calculations {
+  margin-top: 2%;
+  min-width: 550px;
+}
+.oikiaka_calculations .calc_title {
+  color: #a7a2eb;
+  font-size: 36px;
+}
+.oikiaka_calculations .oikiakaCalcRegion {
+  margin-top: 2%;
+}
+.oikiaka_calculations .form_table_wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  margin-top: 1%;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form label.range {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  color: #a7a2eb;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form .yearly_energy {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 3em;
+  color: #f2f2f2;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form .yearly_energy .energy::after {
+  content: " kWh";
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range] {
+  background: transparent;
+  -webkit-appearance: none;
+  margin: 35px 0;
+  width: 90%;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]:focus {
+  outline: none;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-webkit-slider-runnable-track {
+  width: 90%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+  border-radius: 5px;
+  border: 0px solid black;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]:focus::-webkit-slider-thumb {
+  border: 0px solid #f26101;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-webkit-slider-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -17.5px;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]:focus::-webkit-slider-runnable-track {
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-moz-range-track {
+  width: 90%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+  border-radius: 5px;
+  border: 0px solid black;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-moz-range-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-ms-track {
+  width: 90%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  background: transparent;
+  border-color: transparent;
+  border-width: 35px 0;
+  color: transparent;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-ms-fill-lower {
+  background: #554d8a;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-ms-fill-upper {
+  background: #554d8a;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]::-ms-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]:focus::-ms-fill-lower {
+  background: #554d8a;
+}
+.oikiaka_calculations .form_table_wrapper .oikiaka_form input[type=range]:focus::-ms-fill-upper {
+  background: #554d8a;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  border: 10px solid #a7a2eb;
+  border-radius: 10px;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table {
+  color: #a7a2eb;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table .currency::after {
+  content: " €";
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table .kgCO2::after {
+  content: " kg CO₂";
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table .years::after {
+  content: " έτη";
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table .weeks::after {
+  content: " εβδομάδες";
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #554d8a;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table tr td {
+  font-size: 22px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table tr td:first-child {
+  font-size: 18px;
+  border-right: none;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table tr td:last-child {
+  border-right: none;
+}
+.oikiaka_calculations .form_table_wrapper .table_wrapper table tr td:nth-child(n + 2) {
+  text-align: center;
+}
+.oikiaka_calculations .cta_wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.oikiaka_calculations .cta_wrapper .cta_button {
+  display: block;
+  color: #310a63;
+  background-color: #f26101;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 20px 5px rgba(0, 0, 0, 0.7);
+  width: 70%;
+}
+.oikiaka_calculations .cta_wrapper .cta_button p {
+  line-height: 1.38em;
+}
+.oikiaka_calculations .cta_wrapper .cta_button span {
+  text-transform: capitalize;
+}
+
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+@import url(http://fonts.googleapis.com/css?family=Flamenco:400);
+.portfolio {
+  width: 100%;
+  background: -webkit-linear-gradient(#310a63, #f2f2f2);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#310a63, #f2f2f2);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#310a63, #f2f2f2);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#310a63, #f2f2f2);
+  /* Standard syntax */
+}
+.portfolio .container {
+  /*max-width: @maxpagewidth;
+        margin-right: auto;
+        margin-left: auto;*/
+  min-height: 450px;
+  height: 810px;
+  position: relative;
+}
+.portfolio .container .portfoliomap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.portfolio .container .portfoliomap_enabled {
+  pointer-events: all;
+}
+.portfolio .container .customcontrols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 810px;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  /*.customcontrols_relative {
+                position: relative;
+                //.debug();
+                width: 100%;
+                height: @height;
+                */
+  /*
+                    width: 100%;
+                    position: absolute;
+                    @halfHeight: @fontSize / 2;
+                    top: ~"calc(50% - @{halfHeight})";*/
+}
+.portfolio .container .customcontrols .overlay_button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  cursor: pointer;
+  font-size: 64px;
+  height: 100%;
+  color: #a7a2eb;
+  background-color: rgba(49, 10, 99, 0.7);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  pointer-events: all;
+}
+.portfolio .container .customcontrols .overlay_button p {
+  text-align: center;
+  margin: auto;
+}
+.portfolio .container .customcontrols .overlay_button_minimized {
+  font-size: 20px;
+  height: auto;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  margin-top: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.portfolio .container .customcontrols .buttonup {
+  /*position: absolute;
+                    top: 0;*/
+  color: #f2f2f2;
+  align-self: center;
+  -webkit-align-self: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-decoration: none;
+  pointer-events: all;
+  width: 20%;
+  height: 100px;
+  background-color: #310a63;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.portfolio .container .customcontrols .buttonup p {
+  margin: auto;
+  font-size: 80px;
+  font-family: Flamenco, cursive;
+}
+.portfolio .container .customcontrols .buttonup p.rotated {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+}
+.portfolio .container .customcontrols .buttondown {
+  /*position: absolute;
+                    bottom: 0;*/
+  color: #310a63;
+  align-self: center;
+  -webkit-align-self: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-decoration: none;
+  pointer-events: all;
+  width: 20%;
+  height: 100px;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+.portfolio .container .customcontrols .buttondown p {
+  margin: auto;
+  font-size: 80px;
+  font-family: Flamenco, cursive;
+}
+.portfolio .container .customcontrols .buttondown p.rotated {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+}
+
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.testimonials {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 1%;
+}
+.testimonials .container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials .container .testimonials_collection {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.testimonials .container .testimonials_collection .testimonial {
+  padding: 1%;
+  min-width: 450px;
+}
+.testimonials .container .testimonials_collection .testimonial a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.testimonials .container .testimonials_collection .testimonial a .subject_photo {
+  -webkit-box-flex: 0 3 auto;
+  -moz-box-flex: 0 3 auto;
+  -webkit-flex: 0 3 auto;
+  -ms-flex: 0 3 auto;
+  flex: 0 3 auto;
+  max-width: 150px;
+  min-width: 75px;
+  max-height: 150px;
+  min-height: 75px;
+  /*.subject_photo_image {
+                            height: 100%;
+
+                            this can be dynamic with style in html element:
+
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                visibility: hidden;
+                            }
+                        }
+
+                        implementation goes like that:
+                        <div class="subject_photo_image" style="background: url("http://placekitten.com/g/200/500");">
+                            <img src="http://bit.ly/1cDbWmj"/> <!-- this is a large image to expand the container -->
+                        </div>
+
+                        */
+}
+.testimonials .container .testimonials_collection .testimonial a .subject_photo img {
+  max-width: 100%;
+  max-height: 150px;
+  -webkit-box-shadow: 0 0 13px 3px #310a63;
+  -moz-box-shadow: 0 0 13px 3px #310a63;
+  box-shadow: 0 0 13px 3px #310a63;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .openquote {
+  color: #310a63;
+  font-size: 2.91666667vmax;
+  padding-left: 2%;
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  transform: translate(0px, -10px);
+  -moz-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  -o-transform: translate(0px, -10px);
+  -webkit-transform: translate(0px, -10px);
+}
+@media all and (min-width: 1440px) {
+  .testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .openquote {
+    font-size: 42px;
+  }
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text {
+  color: #554d8a;
+  font-size: 24px;
+  padding-left: 2%;
+  max-width: 17em;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper {
+  font-size: 19px;
+  padding-left: 1%;
+  padding-top: 1%;
+  font-style: italic;
+  color: #a7a2eb;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper .testimonial_sign span::before {
+  content: "── ";
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .testimonial_text .testimonial_sign_wrapper .testimonial_reference {
+  text-decoration: underline;
+}
+.testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .closequote {
+  color: #310a63;
+  font-size: 2.91666667vmax;
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+  transform: translate(0px, 10px);
+  -moz-transform: translate(0px, 10px);
+  -ms-transform: translate(0px, 10px);
+  -o-transform: translate(0px, 10px);
+  -webkit-transform: translate(0px, 10px);
+}
+@media all and (min-width: 1440px) {
+  .testimonials .container .testimonials_collection .testimonial a .testimonial_quote_wrapper .closequote {
+    font-size: 42px;
+  }
+}
+
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.contact {
+  background-color: #310a63;
+  width: 100%;
+}
+.contact .container {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.contact .container .title {
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #a7a2eb;
+}
+.contact .container .tagcloud {
+  margin-top: 2.3em;
+  color: #a7a2eb;
+  max-width: 700px;
+  text-align: center;
+}
+.contact .container .tagcloud span {
+  display: inline-block;
+}
+.contact .container .tagcloud .large {
+  font-size: 28px;
+}
+.contact .container .tagcloud .medium {
+  font-size: 22px;
+}
+.contact .container .tagcloud .small {
+  font-size: 16px;
+}
+.contact .container .anythingelse {
+  margin-top: 1.7em;
+  margin-bottom: 1.7em;
+  font-size: 24px;
+  color: #a7a2eb;
+}
+.contact .container .via {
+  align-self: stretch;
+  -webkit-align-self: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 480px;
+}
+.contact .container .via .ontheside {
+  -webkit-box-flex: 1 2 0;
+  -moz-box-flex: 1 2 0;
+  -webkit-flex: 1 2 0;
+  -ms-flex: 1 2 0;
+  flex: 1 2 0;
+  text-align: right;
+  padding-right: 1%;
+}
+.contact .container .via .ontheside .icon {
+  font-size: 6.80555556vmax;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.contact .container .via .inthemiddle a {
+  text-decoration: none;
+}
+.contact .container .via .inthemiddle .prompt {
+  font-size: 28px;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle .data {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 42px;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle .data:hover {
+  text-decoration: underline;
+}
+.contact .container .via .inthemiddle .hint {
+  color: #a7a2eb;
+  font-style: italic;
+  font-size: 18px;
+  text-decoration: none;
+}
+.contact .container .or {
+  color: #554d8a;
+  font-size: 18px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  /*.multiplychar(@char, @count, @string: "") when (@count > 0) {
+                @returnedPrefix: "multi";
+
+                @dynamicVar: ~"@{returnedPrefix}@{count}";
+
+                @{dynamicVar}: ~"@{string}@{char}";
+
+                //.multiplychar(@char, @count -1, @@dynamicVar); //next iteration, do loop
+            };*/
+}
+.contact .container .or span::before {
+  content: "──────────── ";
+}
+.contact .container .or span::after {
+  content: " ────────────";
+}
+.contact .container .copyright {
+  color: #554d8a;
+  font-size: 14px;
+  text-align: center;
+}
+.contact .container .copyright p {
+  line-height: 1.38em;
+}
+.contact .container .copyright_first {
+  margin-top: 4em;
+}
+.contact .container .copyright_first p::before {
+  content: "© ";
+}

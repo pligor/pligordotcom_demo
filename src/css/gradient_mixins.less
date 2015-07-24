@@ -1,0 +1,55 @@
+.gradient_linear_top_to_bottom(@colorTop, @colorBottom, @attribute) {
+    @{attribute}: -webkit-linear-gradient(@colorTop, @colorBottom); /* For Safari 5.1 to 6.0 */
+    @{attribute}: -o-linear-gradient(@colorTop, @colorBottom); /* For Opera 11.1 to 12.0 */
+    @{attribute}: -moz-linear-gradient(@colorTop, @colorBottom); /* For Firefox 3.6 to 15 */
+    @{attribute}: linear-gradient(@colorTop, @colorBottom); /* Standard syntax */
+}
+
+.gradient_linear_top_to_bottom_func(@colorTop, @colorBottom) {
+    @safariLinearGradient: -webkit-linear-gradient(@colorTop, @colorBottom); /* For Safari 5.1 to 6.0 */
+    @operaLinearGradient: -o-linear-gradient(@colorTop, @colorBottom); /* For Opera 11.1 to 12.0 */
+    @firefoxLinearGradient: -moz-linear-gradient(@colorTop, @colorBottom); /* For Firefox 3.6 to 15 */
+    @standardLinearGradient: linear-gradient(@colorTop, @colorBottom); /* Standard syntax */
+}
+
+
+@import "for";
+
+//@colors: green, red, blue;
+
+.applyGradient_topToBottom(@colorTop, @colorBottom, @background) {
+    .gradient_linear_top_to_bottom_func(@colorTop, @colorBottom);
+
+    @gradients: @safariLinearGradient, @operaLinearGradient, @firefoxLinearGradient, @standardLinearGradient;
+
+    .for(@gradients); .-each(@gradient) {
+        //&.@{name} {background: @@name}
+        //&.@{gradient} {background: @gradient}
+        background: @gradient, @background;
+    };
+};
+
+/*
+
+
+.loop(@counter, @inputs, @text) when (@counter > 0) {
+    //width: (6px * @counter); // code for each iteration
+    //color: extract(@colors, @counter);// @counter;
+
+    @current: extract(@inputs, @counter);
+
+    @newText: ~"@{text}, @{current}";
+
+    .loop((@counter - 1), @inputs, @newText);    // next iteration
+}
+
+div {
+    @inputs: url("http://48573"), url("http://asrgerge"), url("http://huihnunu");
+
+    @firstItem: extract(@inputs, 0);
+
+    .loop(1, @inputs, @firstItem); // launch the loop
+
+    background: @newText;
+}
+*/

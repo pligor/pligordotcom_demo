@@ -1,0 +1,707 @@
+@import "flex_mixins";
+@import "palette";
+@import "myconstants";
+@import "pligor_mixins";
+@import "shapes_mixins";
+
+.how_it_works {
+    width: 100%;
+    background-color: @verybright;
+
+    padding-bottom: 1%;
+
+    .container_wrapper {
+        max-width: @maxpagewidth;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        .container {
+            margin-left: 1%;
+        }
+    }
+
+    @minSmilingEngineerWidth: 300px;
+
+    @pvPhotoCaptionWidth: 180px;
+
+    @minPVphotoWidth: 200px;
+
+    @minRightColumnHowItWorksWidth: max(@minSmilingEngineerWidth, @pvPhotoCaptionWidth + @minPVphotoWidth);
+
+    @maxRightColumnHowItWorksWidth: @minSmilingEngineerWidth * 2;
+
+    @howItWorksNumberSize: 90px;
+
+    .howItWorksNumber() {
+        font-size: @howItWorksNumberSize;
+        font-weight: normal;
+        color: @dark;
+    }
+
+    .how_it_works_title {
+        .inlineBlocksNoWrapping();
+    }
+
+    span.how_it_works_number {
+        .howItWorksNumber();
+        vertical-align: middle;
+    }
+
+    span.how_it_works_title_text {
+        vertical-align: middle;
+        font-size: 48px;
+        color: @dark;
+    }
+
+    .step3of3 {
+        margin-top: 4%;
+
+        .how_it_works_title_text {
+            text-transform: capitalize;
+        }
+
+        .content3of3 {
+            .flexbox();
+            margin-top: 1%;
+
+            .flex_get_highshrink_lowshrink(10);
+
+            .leftdummy3 {
+                width: @howItWorksNumberSize;
+                @highshrink();
+
+                //.debug();
+            }
+
+            .rightcontent3 {
+                @lowshrink();
+
+                .flexbox();
+
+                min-width: 645px;
+
+                .rows {
+                    .flexbox();
+                    .flexdirection(column);
+                    .flexjustifycontent(space-between);
+
+                    .row {
+                        .flexbox();
+                        .flexalignitems(center);
+
+                        //white-space: nowrap;
+
+                        .icon {
+                            font-size: 90px;
+                            color: @verydark;
+
+                            //display:inline-block;
+                            //vertical-align: middle;
+                            //padding-right: 1%;
+                        }
+
+                        .row_text {
+                            //.flex(2 1 0);
+                            //.flex(1 0 100%);
+                            //.debug();
+                            //display:inline-block;
+                            //vertical-align: middle;
+
+                            //padding-left: 1%;
+                            margin-left: 2%;
+
+                            color: @dark;
+
+                            p:first-child {
+                                font-size: 36px;
+                                text-transform: capitalize;
+                            }
+
+                            p:last-child {
+                                font-size: 18px;
+
+                                padding-left: 2%;
+                            }
+                        }
+                    }
+                }
+
+                .linechart {
+                    .flex(1);
+                    margin-left: 2%;
+
+                    img {
+                        width: 100%;
+                        min-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .step2of3 {
+        margin-top: 5%;
+
+        @netEnergyFontSize: 32px;
+
+        .content2of3 {
+            .flexwrapper();
+
+            margin-top: 2%;
+
+            .flex_get_highshrink_lowshrink(10);
+
+            .leftdummy {
+                width: @howItWorksNumberSize;
+
+                @highshrink();
+            }
+
+            .rightcontent {
+                @lowshrink();
+                min-width: 600px;
+
+                .last_year_wrapper {
+                    //display: inline-block;
+                    //vertical-align: top;
+                    //.flex(1);
+
+                    //min-width: @lastYearWrapperMinWidth;
+
+                    color: @bright;
+                    font-size: 0;
+
+                    @lastYearRowLineSizeEm: 1.38;
+                    //@lastYearRowWrapperMargin: (@howItWorksNumberSize / 2) - @lastYearRowLineSizeEm *(@netEnergyFontSize / 2);
+                    //margin-top: @lastYearRowWrapperMargin;
+
+                    //.inlineBlocksNoWrapping();
+
+                    .last_year_row {
+                        font-size: @netEnergyFontSize;
+                        line-height: @lastYearRowLineSizeEm * 1em;
+                        text-decoration: line-through; //for more advanced line through strike: http://codepen.io/pearlchen/pen/dhpxu
+
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        //.debug();
+
+                        //white-space: normal;
+                    }
+
+                    div:last-child {
+                        .last_year_row {
+                            .uppercase();
+                        }
+                    }
+
+                    .last_year {
+                        display: inline-block;
+                        font-size: 18px;
+                        .rotateClockwise(-28deg);
+                        color: @verydark;
+                        .uppercase();
+                        margin-left: -2em;
+
+                        vertical-align: middle;
+                    }
+                }
+
+                .energy_netting_text {
+                    margin-top: 2%;
+
+                    font-size: @netEnergyFontSize;
+                    color: @dark;
+                }
+
+                .for_example {
+                    margin-top: 3%;
+
+                    font-style: italic;
+                    color: @dark;
+                    font-size: 18px;
+                }
+
+                .example {
+                    margin-top: 1%;
+
+                    .energy_equalibrium {
+                        margin-top: 2%;
+
+                        text-align: center;
+                        color: @verydark;
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        font-size: 24px;
+                    }
+
+                    @monthNamesFontSize: 24px;
+
+                    @periodHeight: 250px;
+
+                    @heightProductionPeriod2: @periodHeight - @monthNamesFontSize - 10px;
+
+                    @energyHeightInspected: 48px; //without the border
+
+                    .fixedHeightConsumptionPeriod2 {
+                        height: @heightProductionPeriod2 - @energyHeightInspected;
+                    }
+
+                    .fixedHeightProductionPeriod2 {
+                        height: @heightProductionPeriod2;
+                    }
+
+                    .fixedHeightProductionPeriod3 {
+
+                    }
+
+                    .trigger_period {
+                        //.debug()
+                    }
+
+                    .periods_row {
+                        @paddingPeriodsRow: 2%;
+
+                        padding-top: @paddingPeriodsRow;
+                        padding-bottom: @paddingPeriodsRow;
+                        border-top: 1px solid @bright;
+
+                        @consumptionProductionLayoutMargin: 7px;
+                        @consumptionProductionLayoutMinWidth: 110px;
+
+                        @periodMinWidth: 4 * @consumptionProductionLayoutMargin + 2 * @consumptionProductionLayoutMinWidth;
+
+                        .threeperiods {
+                            .flexbox();
+
+                            min-width: @periodMinWidth * 3; //since we have three periods
+
+                            .disabled_period > p {
+                                //visibility: hidden;
+                                //display: none;
+                                color: @bright;
+                            }
+
+                            .period {
+                                .flex(1);
+
+                                @borderPeriod: 2px dashed @dark;
+
+                                border-right: @borderPeriod;
+                                border-left: @borderPeriod;
+
+                                height: @periodHeight;
+
+                                .flexbox();
+                                .flexdirection(column);
+                                .flexjustifycontent(space-between);
+
+                                .month_names {
+                                    text-align: center;
+                                    font-size: @monthNamesFontSize;
+                                    color: @dark;
+                                    text-transform: capitalize;
+                                }
+
+                                .energy_bars {
+                                    .flexwrapper();
+                                    .flexalignitems(flex-end);
+
+                                    &.scrollAnimated {
+                                        overflow: hidden;
+                                        height: 0;
+                                        //.debug()
+                                    }
+
+                                    .consumption_production_icon() {
+                                        color: @bright;
+                                        text-align: center;
+                                        font-size: 60px;
+
+                                        padding-top: 10px;
+                                    }
+
+                                    .consumption_production_text() {
+                                        text-transform: capitalize;
+                                        color: @bright;
+                                        text-align: center;
+                                        font-size: 18px;
+
+                                        padding-bottom: 5px;
+                                    }
+
+                                    .consumption_production_layout() {
+                                        .flex(1);
+                                        background-color: @verydark;
+
+                                        @margin: 7px;
+
+                                        margin-left: @margin;
+                                        margin-right: @margin;
+
+                                        overflow: hidden;
+
+                                        .flexwrapper();
+                                        .flexdirection(column);
+                                        //.flexjustifycontent(space-between);
+                                    }
+
+                                    .consumption_production_explain() {
+                                        color: @bright;
+                                        text-align: center;
+                                        font-size: 14px;
+
+                                        span {
+                                            text-transform: capitalize;
+                                        }
+
+                                        @padding: 10px;
+
+                                        padding-bottom: @padding;
+                                        padding-top: @padding;
+
+                                        @border: 2px dotted @bright;
+                                    }
+
+                                    .consumption {
+                                        .consumption_production_layout();
+                                        //.debug();
+
+                                        .consumption_explain {
+                                            .consumption_production_explain();
+
+                                            border-top: @border;
+                                        }
+
+                                        .consumption_text {
+                                            .consumption_production_text();
+
+                                            margin-bottom: auto; //to mess with the justify
+                                        }
+
+                                        .consumption_icon {
+                                            .consumption_production_icon();
+                                        }
+                                    }
+
+                                    .production {
+                                        .consumption_production_layout();
+                                        //.debug();
+
+                                        .production_text {
+                                            .consumption_production_text();
+                                        }
+
+                                        .production_icon {
+                                            .consumption_production_icon();
+                                        }
+
+                                        .production_explain {
+                                            .consumption_production_explain();
+
+                                            border-bottom: @border;
+
+                                            margin-bottom: auto;
+                                        }
+
+                                        .production_empty {
+                                            height: @energyHeightInspected + 2px; //2px the border size
+                                        }
+                                    }
+                                }
+                            }
+
+                            .period:first-child {
+                                border-left: none;
+                            }
+
+                            .period:last-child {
+                                border-right: none;
+                            }
+                        }
+                    }
+
+                    .periods_row:first-child {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    .periods_row:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        /*.title2 {
+            @lastYearWrapperMinWidth: 465px;
+
+            .inlineBlocksNoWrapping();
+            //.flexwrapper();
+
+            min-width: @lastYearWrapperMinWidth + @howItWorksNumberSize;
+
+            .inlineBlocksNoWrapping();
+
+            .number2 {
+                .howItWorksNumber();
+                display: inline-block;
+                vertical-align: middle;
+                width: @howItWorksNumberSize;
+            }
+
+            .number2_text {
+
+            }
+        }*/
+    }
+
+    .step1of3 {
+        .flexwrapper();
+
+        //min-width: 700px;
+        //.mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+
+        .leftcolumn {
+            //.mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+
+            max-width: @maxpagewidth - @maxRightColumnHowItWorksWidth;
+
+            min-width: 625px; //looked it up from google chrome inspect
+            //we do not want to have this part of the page responsive
+
+            .consume_produce_diagram {
+                //.debug();
+
+                margin-left: 4%;
+                margin-top: 5%;
+
+                .consumer_producer {
+                    margin-top: 1%;
+
+                    //.debug();
+
+                    .flexwrapper();
+                    .flexjustifycontent(space-between);
+
+                    @arrowBaseSize: 7em;
+                    @arrowSidesSize: 2em;
+
+                    .consumes_produces_text() {
+                        background-color: @verydark;
+                        color: @bright;
+                        display: inline-block;
+                        width: 80%;
+                        padding-top: 0.5em;//4%;        //due to firefox issues with percent margins/paddings and flexboxes
+                        padding-bottom: 0.5em;//4%;     //due to firefox issues with percent margins/paddings and flexboxes
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    .consumer_or_producer() {
+                        margin-top: 0.3em;//1%;   //due to firefox issues with percent margins/paddings and flexboxes
+                        width: 100%;
+
+                        background-color: @verydark;
+                        color: @bright;
+
+                        text-align: center;
+
+                        div {
+                            font-size: 120px;
+                            padding-top: 4%;
+                        }
+                        p {
+                            font-size: 32px;
+                            padding-bottom: 1%;
+                        }
+                    }
+
+                    .consumer_or_producer_wrapper() {
+                        font-size: 18px;
+                        .flexwrapper();
+                        .flexdirection(column);
+                        .flexalignitems(center);
+                    }
+
+                    .producer_wrapper {
+                        //.debug();
+                        .consumer_or_producer_wrapper();
+
+                        .produces_arrow {
+                            .uptriangle(@verydark, @arrowBaseSize, @arrowSidesSize);
+                        }
+
+                        .produces_text {
+                            .consumes_produces_text();
+                        }
+
+                        .producer {
+                            .consumer_or_producer();
+                        }
+                    }
+
+                    .consumer_wrapper {
+                        //.debug();
+
+                        .consumer_or_producer_wrapper();
+
+                        .consumes_text {
+                            .consumes_produces_text()
+                        }
+
+                        .consumes_arrow {
+                            .downtriangle(@verydark, @arrowBaseSize, @arrowSidesSize);
+                        }
+
+                        .consumer {
+                            .consumer_or_producer();
+                        }
+                    }
+                }
+
+                .power_grid {
+                    background-color: @verydark;
+
+                    color: @bright;
+
+                    .flexwrapper();
+                    .flexalignitems(center);
+
+                    div:first-child {
+                        font-size: 90px;
+                        //display: inline-block;
+                        //vertical-align: middle;
+
+                        p {
+                            //line-height: 1em;
+                            padding-top: 0.2em;
+                        }
+                    }
+
+                    div:last-child {
+                        //display: inline-block;
+                        //vertical-align: middle;
+                        .flex(1 1 auto);
+
+                        font-size: 60px;
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: none;
+
+                margin-top: 1%;
+                margin-left: 4%;
+
+                color: @dark;
+
+                li {
+                    .inlineBlocksNoWrapping();
+
+                    margin-top: 4%;
+
+                    div:first-child {
+                        font-size: 90px;
+                        color: @verydark;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    div:last-child {
+                        font-size: 32px;
+                        display: inline-block;
+                        max-width: 17em;
+                        //max-width: 200px;
+                        //.debug();
+                        white-space: normal;
+                        vertical-align: middle;
+
+                        p {
+                            line-height: 1.4em;
+                        }
+                    }
+                }
+
+                /*li:before {
+                    content: "✓";
+                    font-size: 72px;
+                    color: @verydark;
+                }*/
+            }
+        }
+
+        .rightcolumn {
+            .flex(1);   //1 1 auto
+
+            min-width: @minRightColumnHowItWorksWidth;
+
+            //overflow: hidden;
+
+            .flexwrapper();
+            .flexdirection(column);
+            .flexalignitems(flex-end);
+        }
+    }
+
+    @captionFontSize: 20px;
+    @captionHeight: 40px;
+    @captionPaddingTopBottom: (@captionHeight - @captionFontSize)/2;
+
+    .twopanels {
+        //margin-top: - @captionHeight; //it is not working with flexbox
+    }
+
+    .pvpanels {
+        .inlineBlocksNoWrapping();
+        font-size: 0;
+        //.debug(2px);
+
+        .flexwrapper();
+
+        .translate_vertically(-@captionHeight);
+    }
+
+    .caption {
+        width: @pvPhotoCaptionWidth;
+        padding-top: @captionPaddingTopBottom;
+        padding-bottom: @captionPaddingTopBottom;
+        background-color: @dark;
+        color: @bright;
+        font-size: @captionFontSize;
+        display: inline-block;
+        text-align: center;
+
+        .flexalignself(flex-start);
+    }
+
+    /*.pvpanels > div {
+        vertical-align: top;
+    }*/
+
+    .pvpanels > div.image {
+        .flex(1);
+    }
+
+    .pvpanels img {
+        vertical-align: top;
+        max-width: 400px;
+        min-width: @minPVphotoWidth;
+        //display: inline-block;
+        width: 100%;
+    }
+
+    .smiling_engineer {
+        //text-align: right;
+    }
+
+    .smiling_engineer > img {
+        min-width: @minSmilingEngineerWidth;
+        max-width: 600px;
+        width: 100%;
+        //.debug(5px);
+    }
+}

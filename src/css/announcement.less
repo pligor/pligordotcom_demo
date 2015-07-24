@@ -1,0 +1,168 @@
+@import "flex_mixins";
+@import "shadow_mixins";
+@import "palette";
+@import "myconstants";
+@import "pligor_mixins";
+
+.announcement {
+    background-color: @ctacolor;
+    width: 100%;
+    padding: 1%;
+
+    .popup {
+
+        .flexwrapper();
+        .flexdirection(column);
+
+        .setLines() {
+            .hex_to_rgba(@verybright, 0.30);
+
+            background-image: //linear-gradient(white 2px, transparent 2px),
+                //linear-gradient(90deg, white 2px, transparent 2px),
+            linear-gradient(@rgba_result 1px, transparent 1px),
+            linear-gradient(90deg, @rgba_result 1px, transparent 1px);
+
+            background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+            background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+        }
+
+        .hex_to_rgba(@bright, 0.85);
+
+        .cloak(@rgba_result);
+
+        .setLines();
+
+        padding: 40px;
+
+        .close_button {
+            a {
+                color: @ctacolor;
+                text-decoration: none;
+                background-color: #202020;
+                display: inline-block;
+                padding-right: 15px;
+
+                cursor: pointer;
+            }
+
+            div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            div:first-child {
+                font-size: 36px;
+            }
+
+            div:last-child {
+                font-size: 24px;
+            }
+        }
+
+        iframe {
+            .flex(1);
+        }
+    }
+
+    .container {
+        margin: auto;
+        max-width: @maxpagewidth;
+
+        min-width: 480px;
+
+        .flexwrapper();
+
+        .flexjustifycontent(space-between);
+
+        .flexalignitems(flex-end);
+
+        .onTheSide() {
+            //.flex(1 2 0);   //grow, shrink, basis
+            .flex(1 1 170px);   //grow, shrink, basis   170px is how large the button is and we want the nbsp on the right to be the same
+        }
+
+        .ok_button {
+            .onTheSide();
+
+            a {
+                background-color: @verybright;
+                color: @ctacolor;
+                padding: 10px;
+                display: inline-block;
+
+                text-decoration: none;
+
+                cursor: pointer;
+            }
+        }
+
+        .dummy_right {
+            .onTheSide();
+        }
+
+        .main_part {
+            .flex(1 1 auto);    //grow, shrink, basis
+
+            //.debug();
+
+            a {
+                color: @verybright;
+                text-decoration: none;
+
+                .flexwrapper();
+                .flexalignitems(center);
+                .flexjustifycontent(space-between);
+            }
+
+            @translateImages: 5px;
+
+            .left_image {
+                .flexselfalign(flex-start);
+
+                width: 3%;
+
+                margin-left: auto;
+
+                > img {
+                    width: 100%;
+                }
+
+                .translate_vertically(-@translateImages);
+
+                //.debug();
+            }
+
+            .right_image {
+                .flexselfalign(flex-end);
+
+                margin-right: auto;
+
+                font-size: 24px;
+
+                .translate_vertically(@translateImages);
+
+                //.debug();
+            }
+
+            .center_text {
+                //.debug();
+
+                text-align: center;
+                padding: 10px;
+
+                @paddingChildren: 3px;
+
+                div:first-child {
+                    font-size: 24px;
+                    padding-bottom: @paddingChildren;
+                }
+                div:last-child {
+                    font-size: 20px;
+
+                    padding-top: @paddingChildren;
+                }
+            }
+        }
+    }
+
+}

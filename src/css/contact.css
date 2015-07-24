@@ -1,0 +1,193 @@
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+row (default): left to right in ltr; right to left in rtl
+row-reverse: right to left in ltr; left to right in rtl
+column: same as row but top to bottom
+column-reverse: same as row-reverse but bottom to top
+*/
+/*
+flex-start (default): items are packed toward the start line
+flex-end: items are packed toward to end line
+center: items are centered along the line
+space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has it's own spacing that applies.
+*/
+/*
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+Note that float, clear and vertical-align have no effect on a flex item.
+*/
+/**
+It does not seem to work
+*/
+/*.flexjustifyself(@value) {
+    justify-self: @value;
+}*/
+/**
+one div get shrinked very little and the other gets shrinked a lot
+especially useful when you need
+*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+.contact {
+  background-color: #310a63;
+  width: 100%;
+}
+.contact .container {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.contact .container .title {
+  font-size: 55px;
+  text-transform: capitalize;
+  color: #a7a2eb;
+}
+.contact .container .tagcloud {
+  margin-top: 2.3em;
+  color: #a7a2eb;
+  max-width: 700px;
+  text-align: center;
+}
+.contact .container .tagcloud span {
+  display: inline-block;
+}
+.contact .container .tagcloud .large {
+  font-size: 28px;
+}
+.contact .container .tagcloud .medium {
+  font-size: 22px;
+}
+.contact .container .tagcloud .small {
+  font-size: 16px;
+}
+.contact .container .anythingelse {
+  margin-top: 1.7em;
+  margin-bottom: 1.7em;
+  font-size: 24px;
+  color: #a7a2eb;
+}
+.contact .container .via {
+  align-self: stretch;
+  -webkit-align-self: stretch;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 480px;
+}
+.contact .container .via .ontheside {
+  -webkit-box-flex: 1 2 0;
+  -moz-box-flex: 1 2 0;
+  -webkit-flex: 1 2 0;
+  -ms-flex: 1 2 0;
+  flex: 1 2 0;
+  text-align: right;
+  padding-right: 1%;
+}
+.contact .container .via .ontheside .icon {
+  font-size: 6.80555556vmax;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.contact .container .via .inthemiddle a {
+  text-decoration: none;
+}
+.contact .container .via .inthemiddle .prompt {
+  font-size: 28px;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle .data {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 42px;
+  color: #f2f2f2;
+}
+.contact .container .via .inthemiddle .data:hover {
+  text-decoration: underline;
+}
+.contact .container .via .inthemiddle .hint {
+  color: #a7a2eb;
+  font-style: italic;
+  font-size: 18px;
+  text-decoration: none;
+}
+.contact .container .or {
+  color: #554d8a;
+  font-size: 18px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  /*.multiplychar(@char, @count, @string: "") when (@count > 0) {
+                @returnedPrefix: "multi";
+
+                @dynamicVar: ~"@{returnedPrefix}@{count}";
+
+                @{dynamicVar}: ~"@{string}@{char}";
+
+                //.multiplychar(@char, @count -1, @@dynamicVar); //next iteration, do loop
+            };*/
+}
+.contact .container .or span::before {
+  content: "──────────── ";
+}
+.contact .container .or span::after {
+  content: " ────────────";
+}
+.contact .container .copyright {
+  color: #554d8a;
+  font-size: 14px;
+  text-align: center;
+}
+.contact .container .copyright p {
+  line-height: 1.38em;
+}
+.contact .container .copyright_first {
+  margin-top: 4em;
+}
+.contact .container .copyright_first p::before {
+  content: "© ";
+}

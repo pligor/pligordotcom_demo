@@ -1,0 +1,156 @@
+@import "palette";
+@import "flex_mixins";
+@import "shadow_mixins";
+@import "shapes_mixins";
+@import "gradient_mixins";
+@import "pligor_mixins";
+@import "transitions";
+@import "myconstants";
+
+@import url(http://fonts.googleapis.com/css?family=Flamenco:400);
+
+.portfolio {
+    width: 100%;
+
+    .gradient_linear_top_to_bottom(@verydark, @verybright, background);
+
+    .container {
+        /*max-width: @maxpagewidth;
+        margin-right: auto;
+        margin-left: auto;*/
+
+        min-height: 450px; //no reason
+
+        @height: 810px;
+
+        height: @height;
+
+        position: relative;
+
+        .portfoliomap {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            pointer-events: none;
+        }
+
+        .portfoliomap_enabled {
+            pointer-events: all;
+        }
+
+        .customcontrols {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: @height;
+
+            pointer-events: none;
+
+            //.debug();
+
+            .flexbox();
+            .flexdirection(column);
+            .flexalignitems(stretch);
+            .flexjustifycontent(space-between);
+
+            /*.customcontrols_relative {
+                position: relative;
+                //.debug();
+                width: 100%;
+                height: @height;
+                */
+
+
+                /*
+                    width: 100%;
+                    position: absolute;
+                    @halfHeight: @fontSize / 2;
+                    top: ~"calc(50% - @{halfHeight})";*/
+                .overlay_button {
+                    .flexbox();
+
+                    cursor: pointer;
+
+                    font-size: 64px;
+                    height: 100%;
+                    color: @bright;
+
+                    p {
+                        text-align: center;
+
+                        margin: auto;
+                    }
+
+                    .hex_to_rgba(background-color, @verydark, 0.7);
+
+                    //.debug();
+                    .transition_ease(1s);
+
+                    pointer-events: all;
+                }
+
+                .overlay_button_minimized {
+                    font-size: 20px; //font-size: 64px;
+                    height: auto; //height: 100%;
+                    .flexalignself(flex-start);
+                    margin-top: auto;
+
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                @escapeButtonRuleset: {
+                    //margin-right: auto;
+                    //margin-left: auto;
+                    .flexselfalign(center); //this is better and more explicit than two margins to auto
+
+                    //text-align: center;   //unnecessary
+                    cursor: pointer;
+
+                    .flexbox();
+
+                    //.debug();
+
+                    text-decoration: none;
+
+                    pointer-events: all;
+
+                    p {
+                        margin: auto;   //for horizontal and vertical centering
+                        font-size: 80px;
+                        font-family: Flamenco, cursive;
+
+                        &.rotated {
+                            .rotateClockwise(180deg);
+                        }
+                    }
+                };
+
+                @escapeButtonWidth: 20%;
+                @escapeButtonHeight: 100px;
+
+                .buttonup {
+                    /*position: absolute;
+                    top: 0;*/
+
+                    color: @verybright;
+                    @escapeButtonRuleset();
+                    .halfoval(@escapeButtonWidth, @escapeButtonHeight, @verydark, down)
+                }
+
+                .buttondown {
+                    /*position: absolute;
+                    bottom: 0;*/
+
+                    color: @verydark;
+                    @escapeButtonRuleset();
+                    .halfoval(@escapeButtonWidth, @escapeButtonHeight, @verybright, up);
+                }
+            //}
+
+        }
+    }
+}

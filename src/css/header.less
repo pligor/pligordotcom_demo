@@ -1,0 +1,150 @@
+@import "palette";
+@import "flex_mixins";
+@import "pligor_mixins";
+@import "myconstants";
+
+//https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+@logotitle_size: 37px;
+@logosubtitle_size: 23px;
+
+@logosquaresize: @logotitle_size + @logosubtitle_size;
+
+@menuitem_width: 150px;
+@menuitem_padding: 5px;
+
+@menuitem_fontsize: 18px;
+
+
+section#header {
+    background-color: @verydark;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.toppanel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: @maxpagewidth;
+
+    .flexwrapper();
+}
+
+.logo_wrapper {
+    //.debug();
+    font-size: 0; //to clear space between inline blocks
+    .inlineBlocksNoWrapping();
+}
+
+.pligor_logo {
+    width: @logosquaresize;
+    height: @logosquaresize;
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: @verybright;
+    padding: 2px;
+    border-radius: 7%;
+}
+
+.pligor_logo img {
+    //define which is smaller and apply only one of the two, here we apply the height
+    //max-width: 100%
+    max-height: 100%;
+}
+
+.logotitles_wrapper {
+    //.debug();
+    //.clearfix();
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.logo_title {
+    .uppercase();
+    color: @verybright;
+
+    font-size: @logotitle_size;
+}
+
+.logo_subtitle {
+    .uppercase();
+    color: @verybright;
+
+    font-size: @logosubtitle_size;
+    text-align: right;
+}
+
+.mainmenu_wrapper {
+    //flex grow, flex shrink, flex basis
+    //default: 0 1 auto
+    .flex(1); //weight=1 and since it is the only flexible item takes up the rest available space
+
+    //to push all the menu items at the right of the screen
+    .flexwrapper();
+    .flexjustifycontent(flex-end);
+}
+
+.mainmenu {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    list-style: none;
+
+    //.debug();
+
+    .flexwrapper();
+
+    color: @verybright;
+    text-align: center;
+
+    //flex-wrap: wrap;
+    //.flexwrap(wrap)
+}
+
+.mainmenu > li {
+    //display: inline-block;
+    .flex(1 1 @menuitem_width);    //same as 1 1 auto
+    padding-left: @menuitem_padding;
+    padding-right: @menuitem_padding;
+
+    a {
+        color: @verybright;
+        text-decoration: none;
+        display: block;
+
+        > div:first-child {
+            .uppercase();
+            font-size: @menuitem_fontsize;
+        }
+
+        > div:last-child {
+            //display: none;
+        }
+
+        &:hover {
+            //background-color: @verybright;
+            //color: @verydark;
+            text-decoration: underline;
+        }
+    }
+
+    //.debug();
+
+    min-width: @menuitem_width;
+}
+
+/*.mainmenu > li:first-child {
+    margin-left: 0;
+}
+
+.mainmenu > li:last-child {
+    margin-right: 0;
+}*/
+
+//I want a row of three columns with a gutter of 5%
+
+

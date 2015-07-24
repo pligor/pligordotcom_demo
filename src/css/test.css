@@ -1,0 +1,222 @@
+/*@verybright: #e5e5e5;
+@verydark: #404040;
+
+@bright: #bfbfbf;
+@dark: #7f7f7f;
+
+@ctacolor: #00ffa1;*/
+/*@verybright: #FFFFFF;
+@verydark: #003354;
+
+@bright: #D9E8F5;
+@dark: #003354;
+
+@ctacolor: #F26101;*/
+/*@verybright: #FFFFFF;
+@verydark: #304269;
+
+@bright: #D9E8F5;
+@dark: #91BED4;
+
+@ctacolor: #F26101;*/
+/*
+target: some attribute (like width, height, min-width, min-height, etc.)
+args: 100% - 80px etc.
+
+sample usage: .mycalculate(min-width, ~"100% - @{minRightColumnHowItWorksWidth}");
+*/
+/**
+paused|running|initial|inherit
+*/
+body {
+  background-color: #310a63;
+}
+.test {
+  width: 200px;
+  height: 300px;
+  outline: 1px solid greenyellow;
+}
+@keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@-khtml-keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@-moz-keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@-ms-keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@-o-keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@-webkit-keyframes myFlashAnim {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.colored {
+  animation-name: myFlashAnim;
+  -moz-animation-name: myFlashAnim;
+  -o-animation-name: myFlashAnim;
+  -webkit-animation-name: myFlashAnim;
+  animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+}
+div.myrangeinput input[type=range] {
+  background: transparent;
+  -webkit-appearance: none;
+  margin: 35px 0;
+  width: 100%;
+}
+div.myrangeinput input[type=range]:focus {
+  outline: none;
+}
+div.myrangeinput input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+  border-radius: 5px;
+  border: 0px solid black;
+}
+div.myrangeinput input[type=range]:focus::-webkit-slider-thumb {
+  border: 0px solid #f26101;
+}
+div.myrangeinput input[type=range]::-webkit-slider-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -17.5px;
+}
+div.myrangeinput input[type=range]:focus::-webkit-slider-runnable-track {
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+}
+div.myrangeinput input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+  background: url("../img/ruler.png"), #554d8a;
+  background-size: contain, auto;
+  border-radius: 5px;
+  border: 0px solid black;
+}
+div.myrangeinput input[type=range]::-moz-range-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+}
+div.myrangeinput input[type=range]::-ms-track {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  animate: 0.2s;
+  /*-webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        animation-timing-function: ease;*/
+  background: transparent;
+  border-color: transparent;
+  border-width: 35px 0;
+  color: transparent;
+}
+div.myrangeinput input[type=range]::-ms-fill-lower {
+  background: #554d8a;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+}
+div.myrangeinput input[type=range]::-ms-fill-upper {
+  background: #554d8a;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black, 0 0 2px #0d0d0d;
+}
+div.myrangeinput input[type=range]::-ms-thumb {
+  box-shadow: 5px 5px 5px black, 0 0 5px #0d0d0d;
+  height: 70px;
+  width: 35px;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.7);
+  cursor: pointer;
+}
+div.myrangeinput input[type=range]:focus::-ms-fill-lower {
+  background: #554d8a;
+}
+div.myrangeinput input[type=range]:focus::-ms-fill-upper {
+  background: #554d8a;
+}
